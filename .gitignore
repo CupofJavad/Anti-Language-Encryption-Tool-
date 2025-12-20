@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Private keys and sensitive files (CRITICAL - never commit these!)
+*.id.sec
+*.sec
+*.key
+*.pem
+
+# Output files
+*.fg.asc
+*.plain.txt
+plain.txt
+message*.fg.asc
+transparency_log.jsonl
+transparency_root.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+demo/ids/*.id.sec
+demo/out/
+tests/*.id.sec
+my_fg_project/
+
