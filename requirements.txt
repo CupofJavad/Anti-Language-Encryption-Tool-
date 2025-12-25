@@ -1,3 +1,6 @@
 cryptography>=43.0.0
 PySimpleGUI>=5.0.4
 pqcrypto>=0.2.5   # optional, for PQ hybrid; safe to omit if unavailable
+Flask>=2.3.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0
