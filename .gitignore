@@ -40,3 +40,11 @@ demo/out/
 tests/*.id.sec
 my_fg_project/
 
+# Deployment config (contains secrets)
+web_app/deploy_config
+web_app/app_spec.yaml
+
+# Secrets file (contains actual tokens - NEVER commit!)
+secretes.txt
+
+secretes.txt

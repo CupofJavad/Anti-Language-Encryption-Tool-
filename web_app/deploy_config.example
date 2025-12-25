@@ -1,0 +1,52 @@
+# DigitalOcean Deployment Configuration
+# Copy this file to 'deploy_config' and fill in your credentials
+# DO NOT commit deploy_config to git!
+
+# ============================================================
+# DigitalOcean API Token
+# ============================================================
+# Get your API token from: https://cloud.digitalocean.com/account/api/tokens
+# NOTE: Replace the sample token below with your actual token from your secret management system
+DIGITALOCEAN_API_TOKEN=your_api_token_here
+
+# ============================================================
+# App Configuration
+# ============================================================
+APP_NAME=forgotten-e2ee
+REGION=nyc1
+# Available regions: nyc1, nyc3, sfo3, ams3, sgp1, lon1, fra1, tor1, blr1
+
+# ============================================================
+# Droplet Configuration (if using Droplets)
+# ============================================================
+DROPLET_SIZE=s-1vcpu-1gb
+# Available sizes: s-1vcpu-1gb, s-1vcpu-2gb, s-2vcpu-2gb, s-2vcpu-4gb
+DROPLET_IMAGE=ubuntu-22-04-x64
+SSH_KEY_NAME=your_ssh_key_name
+# Or use SSH_KEY_ID instead
+
+# ============================================================
+# App Platform Configuration (if using App Platform)
+# ============================================================
+APP_PLATFORM_PLAN=basic
+# Options: basic, professional, enterprise
+
+# ============================================================
+# Domain Configuration (Optional)
+# ============================================================
+DOMAIN_NAME=yourdomain.com
+# Leave empty if not using custom domain
+
+# ============================================================
+# Environment Variables
+# ============================================================
+# These will be set in your deployed app
+FLASK_ENV=production
+FLASK_DEBUG=False
+PORT=8080
+
+# ============================================================
+# Database (Optional - for future use)
+# ============================================================
+# DATABASE_URL=postgresql://user:pass@host:port/dbname
+
