@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotten-E2EE - End-to-End Encryption</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { opacity: 0.9; font-size: 1.1em; }
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .tab:hover { background: #e8e8e8; }
+        .tab.active {
+            background: white;
+            border-bottom: 3px solid #667eea;
+            color: #667eea;
+        }
+        .content {
+            padding: 40px;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        textarea {
+            min-height: 150px;
+            font-family: monospace;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: translateY(-2px); }
+        button:active { transform: translateY(0); }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        .error {
+            background: #fee;
+            border-left-color: #f44;
+            color: #c33;
+        }
+        .success {
+            background: #efe;
+            border-left-color: #4a4;
+            color: #363;
+        }
+        .key-display {
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.9em;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Forgotten-E2EE</h1>
+            <p class="subtitle">End-to-End Encryption with Steganographic Armor</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('keygen')">🔑 Generate Keys</button>
+            <button class="tab" onclick="showTab('encrypt')">✉️ Encrypt</button>
+            <button class="tab" onclick="showTab('decrypt')">📬 Decrypt</button>
+        </div>
+        
+        <div class="content">
+            <!-- Key Generation -->
+            <div id="keygen" class="tab-content active">
+                <h2>Generate Identity Keypair</h2>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="keygen-name" placeholder="Alice" value="Alice">
+                </div>
+                <button onclick="generateKeys()">Generate Keys</button>
+                <div id="keygen-result"></div>
+            </div>
+            
+            <!-- Encryption -->
+            <div id="encrypt" class="tab-content">
+                <h2>Encrypt Message</h2>
+                <div class="form-group">
+                    <label>Recipient Public Key:</label>
+                    <textarea id="encrypt-pubkey" placeholder="Paste recipient's public key here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea id="encrypt-message" placeholder="Enter message to encrypt"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="encrypt-armor"> Use steganographic armor
+                    </label>
+                </div>
+                <button onclick="encryptMessage()">Encrypt</button>
+                <div id="encrypt-result"></div>
+            </div>
+            
+            <!-- Decryption -->
+            <div id="decrypt" class="tab-content">
+                <h2>Decrypt Message</h2>
+                <div class="form-group">
+                    <label>Your Secret Key:</label>
+                    <textarea id="decrypt-secret" placeholder="Paste your secret key here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Encrypted Message:</label>
+                    <textarea id="decrypt-message" placeholder="Paste encrypted message here"></textarea>
+                </div>
+                <button onclick="decryptMessage()">Decrypt</button>
+                <div id="decrypt-result"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+        
+        async function generateKeys() {
+            const name = document.getElementById('keygen-name').value;
+            const resultDiv = document.getElementById('keygen-result');
+            resultDiv.innerHTML = '<p>Generating keys...</p>';
+            
+            try {
+                const response = await fetch('/api/keygen', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({name})
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Keys Generated!</h3>
+                            <p><strong>Public Key:</strong></p>
+                            <div class="key-display">${data.public_key}</div>
+                            <p><strong>Secret Key (keep this safe!):</strong></p>
+                            <div class="key-display">${data.secret_key}</div>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function encryptMessage() {
+            const pubkey = document.getElementById('encrypt-pubkey').value;
+            const message = document.getElementById('encrypt-message').value;
+            const armor = document.getElementById('encrypt-armor').checked;
+            const resultDiv = document.getElementById('encrypt-result');
+            resultDiv.innerHTML = '<p>Encrypting...</p>';
+            
+            try {
+                const response = await fetch('/api/encrypt', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        recipient_pub: pubkey,
+                        plaintext: message,
+                        armor: armor
+                    })
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Encrypted!</h3>
+                            <div class="key-display">${data.output}</div>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function decryptMessage() {
+            const secret = document.getElementById('decrypt-secret').value;
+            const encrypted = document.getElementById('decrypt-message').value;
+            const resultDiv = document.getElementById('decrypt-result');
+            resultDiv.innerHTML = '<p>Decrypting...</p>';
+            
+            try {
+                const response = await fetch('/api/decrypt', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        secret_key: secret,
+                        encrypted_data: encrypted
+                    })
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Decrypted!</h3>
+                            <p>${data.plaintext}</p>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
