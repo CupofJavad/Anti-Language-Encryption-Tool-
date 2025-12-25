@@ -17,12 +17,18 @@ sys.path.insert(0, str(project_root))
 
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from forgotten_e2ee.keystore import Identity, save_public, save_secret
-from forgotten_e2ee.crypto_core import ed25519_keypair, x25519_keypair
+import json
+from forgotten_e2ee.keystore import Identity, save_public, save_secret, load_secret, load_public
+from forgotten_e2ee.crypto_core import (
+    ed25519_keypair, x25519_keypair, raw_pub_bytes_ed, raw_pub_bytes_x,
+    raw_priv_bytes_ed, raw_priv_bytes_x, hkdf, aead_encrypt, aead_decrypt,
+    ed_sign, ed_verify, sha256_hex, secure_random
+)
 from forgotten_e2ee.fmt import FGHeader, emit_armor, parse_armor
-from forgotten_e2ee.util import b64u_enc, b64u_dec
-from forgotten_e2ee.stego import load_lexicon
-from forgotten_e2ee.errors import ESig, EDecrypt
+from forgotten_e2ee.util import b64u_enc, b64u_dec, hex24, sha256_hex, now_s
+from forgotten_e2ee.stego import load_lexicon, lexicon_hash, encode_token_map, decode_token_map
+from forgotten_e2ee.errors import ESig, EDecrypt, ELexicon
+from forgotten_e2ee.pq import hybrid_secret
 
 app = Flask(__name__, template_folder='templates')
 CORS(app)
@@ -73,6 +79,7 @@ def api_keygen():
         }
         
         # Serialize secret key bundle (like save_secret does, but in memory)
+        from forgotten_e2ee.crypto_core import raw_priv_bytes_ed, raw_priv_bytes_x
         ed_raw = raw_priv_bytes_ed(ed_priv)
         x_raw = raw_priv_bytes_x(x_priv)
         # Store as raw (no passphrase for web API)
