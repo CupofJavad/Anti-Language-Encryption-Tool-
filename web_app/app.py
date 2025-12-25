@@ -27,6 +27,11 @@ from forgotten_e2ee.errors import ESig, EDecrypt
 app = Flask(__name__, template_folder='templates')
 CORS(app)
 
+# Production configuration
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', os.urandom(32).hex())
+app.config['DEBUG'] = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+app.config['TESTING'] = False
+
 # Find lexicon directory
 LEXICON_DIR = project_root / 'lexicons'
 DEFAULT_LEXICON = LEXICON_DIR / 'en.txt' if (LEXICON_DIR / 'en.txt').exists() else None
