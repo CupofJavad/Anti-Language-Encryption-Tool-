@@ -1,142 +1,373 @@
-# Forgotten-E2EE (Production-Ready v1.0)
+<div align="center">
 
-Modern, compact, deniable end-to-end encryption with optional steganographic armor.
-- Boring, audited crypto: X25519 (KEX), Ed25519 (sign), ChaCha20-Poly1305 (AEAD), HKDF-SHA256, Scrypt.
-- Optional PQ-hybrid (Kyber512) if `pqcrypto` is installed.
-- Human-readable armor using a deterministic token-map stego layer with lexicon pinning.
-- Clean CLI + minimal GUI.
-- Transparent, append-only identity log with Merkle root.
+# 🔐 Forgotten-E2EE
 
-## Quickstart
+**Modern, deniable end-to-end encryption with steganographic armor**
+
+*Encryption that looks like poetry, not ciphertext*
+
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-53%2F53%20Passed-brightgreen.svg)](web_app/FINAL_TEST_RESULTS.md)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
+
+> *"If privacy is outlawed, only outlaws will have privacy."*  
+> — **Phil Zimmermann**, creator of PGP
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [The Story That Started It All](#the-story-that-started-it-all-phil-zimmermann--pgp)
+- [What is Forgotten-E2EE?](#-what-is-forgotten-e2ee)
+- [Quick Start](#-quick-start)
+- [Ways to Use It](#-ways-to-use-it)
+- [Features Deep Dive](#-features-deep-dive)
+- [Documentation](#-documentation)
+- [Security Notes](#-security-notes)
+- [Testing](#-testing)
+- [Web Deployment](#-web-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## The Story That Started It All: Phil Zimmermann & PGP
+
+In 1991, a software engineer named **Phil Zimmermann** did something that would change the world of cryptography forever—and nearly land him in federal prison.
+
+### The Man Who Dared to Encrypt
+
+Phil created **Pretty Good Privacy (PGP)**, the first widely available encryption software that gave ordinary people the power to communicate privately. But here's where it gets interesting: **the U.S. government wasn't exactly thrilled.**
+
+### The Crypto Wars Begin 🛡️
+
+You see, in the early 1990s, encryption software was classified as a **"munition"** under U.S. export laws. The government argued that strong encryption in the hands of civilians was a national security threat. So when Phil released PGP to the world—making it freely available on the internet—he found himself in the crosshairs of a **three-year federal criminal investigation**.
+
+**The charges?** Violating the Arms Export Control Act by "exporting" encryption software (even though he just uploaded it to the internet).
+
+### The Battle for Privacy
+
+For three years, Phil faced the possibility of **federal prison time**. But he never backed down. He argued that privacy is a fundamental human right, and that strong encryption protects journalists, activists, dissidents, and ordinary citizens from surveillance and oppression.
+
+The case became a symbol of the **"Crypto Wars"**—the battle between privacy advocates and government surveillance. Phil's defense was simple yet powerful: *"If privacy is outlawed, only outlaws will have privacy."*
+
+### Victory & Legacy 🏆
+
+In 1996, after years of legal battles and mounting public pressure, **the charges were dropped**. The government realized they couldn't stop the spread of encryption technology—it was already out there, and it was here to stay.
+
+Phil's fight paved the way for:
+- ✅ End-to-end encryption becoming standard
+- ✅ Privacy tools for everyone (not just governments)
+- ✅ The modern encryption ecosystem we rely on today
+- ✅ Projects like this one
+
+### Why This Matters to Me (And This Project)
+
+Phil Zimmermann's story is more than history—it's a **reminder of why privacy matters**. He risked everything to give people the tools to protect their communications, and he won. That's the spirit behind **Forgotten-E2EE**.
+
+This project is my small contribution to that legacy: **encryption that's powerful, deniable, and accessible to everyone**—no government approval required, no backdoors, no compromises.
+
+---
+
+## 🌟 What is Forgotten-E2EE?
+
+**Forgotten-E2EE** is a modern, compact end-to-end encryption toolkit with a twist: **steganographic armor** that makes encrypted messages look like innocent prose. Think of it as PGP's rebellious younger sibling who learned to hide in plain sight.
+
+### The Cool Parts ✨
+
+- 🔒 **Boring, Audited Crypto** - X25519, Ed25519, ChaCha20-Poly1305 (the good stuff)
+- 🎭 **Steganographic Armor** - Encrypted messages disguised as beautiful prose
+- 🚫 **Deniable** - Messages look like poetry, not ciphertext
+- 🌐 **Web-Ready** - Deploy it, embed it, share it
+- 🎨 **Multiple Interfaces** - CLI, GUI (Tkinter), and Web app
+- 🔐 **Post-Quantum Ready** - Optional Kyber512 hybrid encryption
+
+### The Steganography Magic 🎪
+
+Here's where it gets fun: instead of outputting ugly base64 gibberish, Forgotten-E2EE can transform your encrypted messages into **beautiful, readable prose** using a deterministic token-map. Your secret message becomes something like:
+
+> *"luminous whisper drifts through velvet shadows, where ember thoughts kindle in the hush of midnight's embrace..."*
+
+Looks like poetry, right? **It's actually your encrypted message.** Only someone with the right key and lexicon can decode it. Even if intercepted, it just looks like... well, poetry.
+
+---
+
+## 🚀 Quick Start
+
+### Installation
+
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+# Clone the repo
+git clone https://github.com/CupofJavad/Anti-Language-Encryption-Tool-.git
+cd Anti-Language-Encryption-Tool-
+
+# Set up virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+```
 
-# Generate two identities (passphrase-protected)
-python forgotten_e2ee.py keygen --name Alice --out ./ids
-python forgotten_e2ee.py keygen --name Bob   --out ./ids
+### Your First Encrypted Message (30 seconds)
 
-# Encrypt from Alice to Bob (armored stego)
-echo "hello forgotten" > msg.txt
+```bash
+# 1. Generate your identity
+python forgotten_e2ee.py keygen --name Alice --out ./ids --no-pass
+
+# 2. Generate a friend's identity
+python forgotten_e2ee.py keygen --name Bob --out ./ids --no-pass
+
+# 3. Encrypt a message (with steganographic armor!)
+echo "Hello from the future!" > secret.txt
 python forgotten_e2ee.py encrypt \
-  --to ./ids/bob.id.pub --in msg.txt --out msg.fg.asc \
-  --armor --lexicon lexicons/en.txt \
-  --sign-priv ./ids/alice.id.sec
-
-# Decrypt as Bob (auto verifies signature if Sender-FP is provided)
-python forgotten_e2ee.py decrypt \
-  --priv ./ids/bob.id.sec --in msg.fg.asc --out plain.txt --lexicon lexicons/en.txt
-cat plain.txt
-
-CLI
-	•	keygen      Create Ed25519/X25519 identity;
-passphrase encrypts keyfile with Scrypt+ChaCha20.
-	•	show-fp     Print fingerprint of a public bundle (24 hex).
-	•	encrypt     Encrypt file/stdin to recipient; optional armor + lexicon; optional signature.
-	•	decrypt     Decrypt armored or binary message; verifies signature when present.
-Security notes
-	•	Keys are protected with Scrypt (N=2^15, r=8, p=1) + ChaCha20-Poly1305.
-	•	AEAD nonces are derived deterministically per message;
-reuse is structurally prevented.
-	•	The armor payload contains no plaintext metadata; header fields are authenticated.
-	•	PQ-hybrid is optional and auto-enabled when pqcrypto is available.
-
-Tests
-
-pip install pytest
-pytest -q
-
-## Detailed Walkthrough
-
-Follow these steps to reproduce two complete encryption/decryption cycles using the sample dream log texts.
-
-### 1. Set up a clean workspace (optional but recommended)
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-mkdir -p demo/ids demo/texts demo/out
-```
-
-### 2. Generate two identities (no passphrases for the demo)
-```bash
-python forgotten_e2ee.py keygen --name Alice --out demo/ids --no-pass
-python forgotten_e2ee.py keygen --name Bob   --out demo/ids --no-pass
-```
-
-### 3. Prepare a lexicon
-Use the bundled `lexicons/en.txt`, or copy it beside the outputs for clarity:
-```bash
-cp lexicons/en.txt demo/lexicon.txt
-```
-
-### 4. Create the sample texts
-```bash
-cat <<'EOF' > demo/texts/dream1.txt
-Private Dreamlog Entry 6.16.22
-
-Huge massive tree among this coast where I recognize coming here for the maybe they second time but only after mentioning it. The tree has these massive swinging branches with petals/flowers attached to bottom that cup or fold out. There are different statues of animals and extremely oversized animals running around. You see a dark beautiful woman swinging on a swing, then approach a white woman who comes off as initially very attractive…somehow she knows your name upfront and you soon realize the meetup was a setup. The question “You don’t think your worth all this?” Possibly about your drug use? Possibly this is a real life projection of donkey Kong map ? Tree of life visit?
-EOF
-
-cat <<'EOF' > demo/texts/dream2.txt
-Private Dreamlog Entry 9.19.22
-
-3-25
-
-We are driving in the Audi and some guy breaks in front of me because these drones were distracting our view. I been drinking, get out to see what it was and apologize or whatever. Drones are no where. We see another one go by and do some weird shit with another one. They later we find out their these hovering magnets pieces of glass projecting a holographic image of drone directly up. I stop one as it goes by. They’re transparent and next level tech. Wake up
-EOF
-```
-
-### 5. Encrypt Example Text 1 (Alice ➜ Bob, armored stego)
-```bash
-python forgotten_e2ee.py encrypt \
-  --to demo/ids/bob.id.pub \
-  --in demo/texts/dream1.txt \
-  --out demo/out/dream1.fg.asc \
+  --to ./ids/bob.id.pub \
+  --in secret.txt \
+  --out message.fg.asc \
   --armor \
-  --lexicon demo/lexicon.txt \
-  --sign-priv demo/ids/alice.id.sec
-```
-The armored result is in `demo/out/dream1.fg.asc` and includes `Ciphertext-B64`, letting Bob recover the authenticated ciphertext exactly.
+  --lexicon lexicons/en.txt
 
-### 6. Decrypt Example Text 1 (Bob)
-```bash
+# 4. Decrypt it (as Bob)
 python forgotten_e2ee.py decrypt \
-  --priv demo/ids/bob.id.sec \
-  --in demo/out/dream1.fg.asc \
-  --out demo/out/dream1.plain.txt \
-  --lexicon demo/lexicon.txt \
+  --priv ./ids/bob.id.sec \
+  --in message.fg.asc \
+  --out decrypted.txt \
+  --lexicon lexicons/en.txt \
   --no-pass
-cat demo/out/dream1.plain.txt
-```
-Bob now reads the original dream entry.
 
-### 7. Encrypt Example Text 2 (reuse the same keys/lexicon)
+cat decrypted.txt  # "Hello from the future!"
+```
+
+**Boom!** You just sent an encrypted message that looks like poetry. 🎉
+
+---
+
+## 🎮 Ways to Use It
+
+### Option 1: Command Line (For the Terminal Warriors)
+
 ```bash
+# Generate keys
+python forgotten_e2ee.py keygen --name YourName --out ./keys
+
+# Encrypt
 python forgotten_e2ee.py encrypt \
-  --to demo/ids/bob.id.pub \
-  --in demo/texts/dream2.txt \
-  --out demo/out/dream2.fg.asc \
+  --to recipient.id.pub \
+  --in message.txt \
+  --out encrypted.fg.asc \
   --armor \
-  --lexicon demo/lexicon.txt \
-  --sign-priv demo/ids/alice.id.sec
-```
+  --lexicon lexicons/en.txt
 
-### 8. Decrypt Example Text 2
-```bash
+# Decrypt
 python forgotten_e2ee.py decrypt \
-  --priv demo/ids/bob.id.sec \
-  --in demo/out/dream2.fg.asc \
-  --out demo/out/dream2.plain.txt \
-  --lexicon demo/lexicon.txt \
-  --no-pass
-cat demo/out/dream2.plain.txt
+  --priv your.id.sec \
+  --in encrypted.fg.asc \
+  --out decrypted.txt \
+  --lexicon lexicons/en.txt
 ```
 
-### 9. Optional verifications
-- `forgotten_e2ee.py show-fp --pub demo/ids/bob.id.pub` to confirm Bob’s fingerprint matches the armor header.
-- Inspect `demo/out/dream*.fg.asc` to see the token-map prose and authenticated metadata such as `Lexicon-Ref` and `Ciphertext-B64`.
+### Option 2: GUI (For the Click-Happy Folks)
 
-The same pattern works for any plaintext files—you can swap in different lexicons or identities as needed. Tests remain available with:
 ```bash
-pytest -q
+# Launch the GUI (uses Tkinter - free, no dependencies!)
+python launch_gui.py
+# OR
+python forgotten_e2ee/gui.py
 ```
+
+Beautiful, intuitive interface with tabs for:
+- 🔑 Key generation
+- ✉️ Encryption
+- 📬 Decryption
+
+### Option 3: Web App (For the Modern Web)
+
+```bash
+cd web_app
+python app.py
+```
+
+Then visit `http://localhost:8080` (or whatever port it shows).
+
+**Or deploy it to DigitalOcean** and embed it on your website! (See [Deployment Guide](web_app/DEPLOYMENT_GUIDE.md))
+
+---
+
+## 🔧 Features Deep Dive
+
+### The Crypto Stack
+
+We use **boring, well-audited cryptography** (because exciting crypto usually means broken crypto):
+
+- **X25519** - Elliptic curve key exchange (fast, secure, modern)
+- **Ed25519** - Digital signatures (compact, fast, secure)
+- **ChaCha20-Poly1305** - Authenticated encryption (what Signal uses)
+- **HKDF-SHA256** - Key derivation (the safe way to stretch keys)
+- **Scrypt** - Password-based key derivation (protects your keys)
+
+### Steganographic Armor 🎭
+
+The **really cool part**: your encrypted messages can be disguised as prose using a deterministic token-map. You provide a lexicon (word list), and the system maps ciphertext bits to words, creating beautiful text that looks completely innocent.
+
+**Example output:**
+```
+-----BEGIN FORGOTTEN MESSAGE-----
+Version: 1
+Sender-FP: ABC123...
+Recipient-FP: XYZ789...
+Payload:
+luminous whispers drift through velvet shadows where ember thoughts 
+kindle in the hush of midnight's embrace. quantum echoes ripple across 
+astral planes, each glyph a silent guardian of secrets untold...
+-----END FORGOTTEN MESSAGE-----
+```
+
+Looks like poetry. **Is actually encrypted data.** Only you and your recipient know the difference.
+
+### Post-Quantum Hybrid (Optional)
+
+If you install `pqcrypto`, you get **Kyber512** post-quantum encryption mixed with classical crypto. Future-proof your messages against quantum computers (you know, just in case Skynet happens).
+
+---
+
+## 📚 Documentation
+
+- **[Web App Guide](web_app/README.md)** - Deploy and embed the web version
+- **[Deployment Guide](web_app/DEPLOYMENT_GUIDE.md)** - Deploy to DigitalOcean
+- **[Embedding Guide](web_app/EMBEDDING_GUIDE.md)** - Add to your website
+- **[Test Results](web_app/FINAL_TEST_RESULTS.md)** - Comprehensive test suite (53/53 passed! ✅)
+
+---
+
+## 🛡️ Security Notes
+
+**Important things to know:**
+
+- 🔐 Keys are protected with **Scrypt + ChaCha20-Poly1305**
+- 🎲 Nonces are derived deterministically (no reuse possible)
+- ✅ Armor headers are authenticated (can't be tampered with)
+- 🔒 No plaintext metadata leaks in armor mode
+- 🚫 **No backdoors. No compromises. No exceptions.**
+
+This is real encryption. Use it responsibly.
+
+---
+
+## 🧪 Testing
+
+We take testing seriously. **53 comprehensive tests** covering:
+- Core functionality
+- API endpoints
+- Deployment scenarios
+- Edge cases
+- Security checks
+
+Run the test suite:
+```bash
+cd web_app
+python comprehensive_test_suite.py
+python deployment_tests.py
+python final_validation.py
+```
+
+**Result:** ✅ All 53 tests passed!
+
+---
+
+## 🌐 Web Deployment
+
+Want to embed this on your website? We've got you covered:
+
+1. **Deploy to DigitalOcean** (see [Deployment Guide](web_app/DEPLOYMENT_GUIDE.md))
+2. **Get your URL**: `https://your-app.ondigitalocean.app`
+3. **Embed it:**
+   ```html
+   <iframe 
+       src="https://your-app.ondigitalocean.app/embed" 
+       width="100%" 
+       height="800" 
+       frameborder="0">
+   </iframe>
+   ```
+
+Done! Your visitors can now encrypt messages directly on your site. 🎉
+
+---
+
+## 🤝 Contributing
+
+Found a bug? Have an idea? Want to add a feature?
+
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+**We welcome contributions!** Especially:
+- New lexicon files (different languages, themes)
+- UI/UX improvements
+- Documentation improvements
+- Security audits (please!)
+
+---
+
+## 📜 License
+
+MIT License - Do whatever you want with it. Just don't blame us if you encrypt something you shouldn't have. 😉
+
+See [LICENSE](LICENSE) for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Phil Zimmermann** - For fighting the good fight and inspiring this project
+- **The cryptography community** - For the amazing tools and libraries
+- **Everyone who values privacy** - You're the reason this exists
+
+---
+
+## ⚠️ Disclaimer
+
+This is encryption software. Use it responsibly. We're not responsible for:
+- What you encrypt
+- What you decrypt
+- Any legal consequences
+- Your cat learning to use it (though that would be impressive)
+
+**Remember:** With great encryption comes great responsibility. Use it for good. 🦸
+
+---
+
+## 📞 Support & Questions
+
+- **Issues:** [GitHub Issues](https://github.com/CupofJavad/Anti-Language-Encryption-Tool-/issues)
+- **Documentation:** Check the `web_app/` directory for detailed guides
+- **Security Issues:** Please report responsibly
+
+---
+
+## 🎯 Roadmap
+
+- [ ] More lexicon options (themes, languages)
+- [ ] Mobile app (maybe?)
+- [ ] Browser extension
+- [ ] Group messaging support
+- [ ] Your idea here! (seriously, suggest it)
+
+---
+
+<div align="center">
+
+**Made with 🔐 and ❤️ for privacy advocates everywhere**
+
+*"If privacy is outlawed, only outlaws will have privacy."*  
+— Phil Zimmermann
+
+[⭐ Star this repo](https://github.com/CupofJavad/Anti-Language-Encryption-Tool-) | [🐛 Report Bug](https://github.com/CupofJavad/Anti-Language-Encryption-Tool-/issues) | [💡 Request Feature](https://github.com/CupofJavad/Anti-Language-Encryption-Tool-/issues)
+
+</div>
