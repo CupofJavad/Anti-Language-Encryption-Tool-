@@ -1,0 +1,15 @@
+{
+  "id": "45f319d4-be6e-41d3-8c77-21870ad8c961",
+  "created": 1766696352,
+  "source_lang": "en",
+  "theme_key": "en",
+  "theme_name": "En",
+  "note": "forward_map is src_lower -> themed_lower; reverse is derivable.",
+  "forward_map": {
+    "test": "wall",
+    "message": "material",
+    "for": "hand",
+    "auto": "motor",
+    "extraction": "emergency"
+  }
+}

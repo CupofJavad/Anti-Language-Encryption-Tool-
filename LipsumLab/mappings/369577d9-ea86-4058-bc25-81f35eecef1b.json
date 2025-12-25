@@ -1,0 +1,17 @@
+{
+  "id": "369577d9-ea86-4058-bc25-81f35eecef1b",
+  "created": 1766696257,
+  "source_lang": "en",
+  "theme_key": "en",
+  "theme_name": "En",
+  "note": "forward_map is src_lower -> themed_lower; reverse is derivable.",
+  "forward_map": {
+    "hello": "sink",
+    "world": "level",
+    "this": "area",
+    "is": "sea",
+    "a": "ern",
+    "test": "map",
+    "message": "forest"
+  }
+}

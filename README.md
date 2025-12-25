@@ -183,7 +183,9 @@ Beautiful, intuitive interface with tabs for:
 - ✉️ Encryption
 - 📬 Decryption
 
-### Option 3: Web App (For the Modern Web)
+### Option 3: Web App (For the Modern Web) 🌐
+
+**Full-featured web interface with ALL capabilities!**
 
 ```bash
 cd web_app
@@ -193,6 +195,57 @@ python app.py
 Then visit `http://localhost:8080` (or whatever port it shows).
 
 **Or deploy it to DigitalOcean** and embed it on your website! (See [Deployment Guide](web_app/DEPLOYMENT_GUIDE.md))
+
+#### Web App Features (Complete Feature Parity!)
+
+The web app includes **EVERYTHING** from the CLI and GUI:
+
+✅ **Key Generation**
+- Generate identity keypairs with custom names
+- Optional passphrase encryption (Scrypt + ChaCha20)
+- Download keys as `.id.pub` and `.id.sec` files (ZIP download)
+- Upload existing key files
+- Show fingerprint utility
+
+✅ **Encryption**
+- Encrypt messages for recipients
+- Steganographic armor (prose output) - **default enabled**
+- 9+ lexicon options (English, German, Spanish, French, Italian, Biotech, Cyberpunk, etc.)
+- Mapping mode selection (token_map_v1/v2)
+- **Message signing** (add authenticity with your secret key)
+- File upload for recipient public keys
+- File download for encrypted messages
+
+✅ **Decryption**
+- Decrypt with secret key (supports passphrase-protected keys)
+- Automatic format detection (armor/binary)
+- Lexicon selection (must match encryption)
+- **Signature verification** (verify sender authenticity)
+- File upload for secret keys and encrypted messages
+- File download for decrypted plaintext
+
+✅ **LipsumLab Integration** 🎨
+- **Language → Themed Ipsum**: Transform any text into themed prose
+- **Themed Ipsum → Language**: Reversibly decode back to original
+- Multiple theme options (Latin, Cyberpunk, Biotech, etc.)
+- Automatic mapping generation and storage
+- Perfect for creating deniable encrypted messages
+
+✅ **Advanced Features**
+- Fingerprint display utility
+- File upload/download support
+- Message signing and verification
+- Admin dashboard (usage stats, mapping management, theme customization)
+- Usage tracking and analytics
+
+✅ **Admin System** 🔐
+- Secure admin authentication
+- Access to all mapping files (encryption roadmaps)
+- Usage statistics and analytics
+- UI theme customization
+- Site usage tracking
+
+**The web app is NOT a simplified version—it's a complete, feature-rich interface!**
 
 ---
 
@@ -208,6 +261,58 @@ We use **boring, well-audited cryptography** (because exciting crypto usually me
 - **HKDF-SHA256** - Key derivation (the safe way to stretch keys)
 - **Scrypt** - Password-based key derivation (protects your keys)
 
+### Complete Feature List 🎯
+
+#### Key Management
+- ✅ Generate identity keypairs (Ed25519 + X25519)
+- ✅ Passphrase-protected secret keys (optional)
+- ✅ Key fingerprint display
+- ✅ File upload/download for keys
+- ✅ Key encryption with Scrypt + ChaCha20
+
+#### Encryption Features
+- ✅ End-to-end encryption (E2EE)
+- ✅ Steganographic armor (prose output)
+- ✅ 9+ lexicon options (themes and languages)
+- ✅ Mapping mode selection (token_map_v1/v2)
+- ✅ **Message signing** (Ed25519 signatures for authenticity)
+- ✅ Post-quantum hybrid (optional Kyber512)
+- ✅ Binary and armor output formats
+- ✅ File upload/download support
+
+#### Decryption Features
+- ✅ Automatic format detection (armor/binary)
+- ✅ Lexicon verification (ensures correct decryption)
+- ✅ **Signature verification** (verify sender authenticity)
+- ✅ Passphrase support for encrypted keys
+- ✅ File upload/download support
+
+#### LipsumLab Integration 🎨
+- ✅ **Language → Themed Ipsum**: Transform text into themed prose
+- ✅ **Themed Ipsum → Language**: Reversibly decode back
+- ✅ Multiple themes (Latin, Cyberpunk, Biotech, etc.)
+- ✅ Automatic mapping generation
+- ✅ Mapping storage and retrieval
+- ✅ Language code support (40+ languages)
+
+#### Web App Features
+- ✅ Full-featured web interface
+- ✅ File upload/download
+- ✅ Real-time encryption/decryption
+- ✅ Lexicon selection dropdowns
+- ✅ Configuration management
+- ✅ Admin dashboard
+- ✅ Usage tracking
+- ✅ Theme customization
+
+#### Admin System 🔐
+- ✅ Secure authentication
+- ✅ Mapping file access (encryption roadmaps)
+- ✅ Usage statistics
+- ✅ Analytics dashboard
+- ✅ UI theme management
+- ✅ Site monitoring
+
 ### Steganographic Armor 🎭
 
 The **really cool part**: your encrypted messages can be disguised as prose using a deterministic token-map. You provide a lexicon (word list), and the system maps ciphertext bits to words, creating beautiful text that looks completely innocent.
@@ -218,6 +323,8 @@ The **really cool part**: your encrypted messages can be disguised as prose usin
 Version: 1
 Sender-FP: ABC123...
 Recipient-FP: XYZ789...
+Mode: token_map_v1
+Lexicon-Ref: sha256:abc123...
 Payload:
 luminous whispers drift through velvet shadows where ember thoughts 
 kindle in the hush of midnight's embrace. quantum echoes ripple across 
@@ -227,9 +334,130 @@ astral planes, each glyph a silent guardian of secrets untold...
 
 Looks like poetry. **Is actually encrypted data.** Only you and your recipient know the difference.
 
+### Message Signing & Verification ✍️
+
+**Add authenticity to your messages!** Just like PGP, you can sign your encrypted messages to prove they came from you.
+
+**How it works:**
+1. **Signing**: When encrypting, provide your secret key (`--sign-priv` in CLI, or signer secret key in web app)
+2. **Verification**: When decrypting, provide the sender's public key to verify the signature
+3. **Result**: You get a ✅ or ❌ indicating whether the signature is valid
+
+**Why it matters:**
+- Proves the message came from the claimed sender
+- Prevents tampering (signature won't verify if message was modified)
+- Adds an extra layer of trust to your communications
+
+**Example (CLI):**
+```bash
+# Encrypt with signature
+python forgotten_e2ee.py encrypt \
+  --to bob.id.pub \
+  --in message.txt \
+  --out signed.fg.asc \
+  --armor \
+  --sign-priv alice.id.sec \
+  --lexicon lexicons/en.txt
+
+# Decrypt and verify signature
+python forgotten_e2ee.py decrypt \
+  --priv bob.id.sec \
+  --in signed.fg.asc \
+  --out verified.txt \
+  --sender-pub alice.id.pub \
+  --lexicon lexicons/en.txt
+```
+
+**In the web app:** Just paste your signer secret key when encrypting, and the sender's public key when decrypting. The interface will show you the verification status!
+
+### LipsumLab: Reversible Themed Ipsum 🎨
+
+**Transform any text into themed prose, then decode it back perfectly!**
+
+LipsumLab is a powerful feature that lets you:
+- Convert regular text into themed "Lorem Ipsum" style prose
+- Use different themes (Latin, Cyberpunk, Biotech, etc.)
+- **Reversibly decode** back to the original text (lossless!)
+
+**Perfect for:**
+- Creating deniable encrypted messages
+- Hiding plaintext in plain sight
+- Artistic text transformation
+- Testing steganographic techniques
+
+**Example:**
+```bash
+# Encode English → Cyberpunk theme
+python -m LipsumLab.li_manager
+# Choose option 1 (Language → Ipsum)
+# Enter your text
+# Select theme: cyberpunk
+# Get themed output with mapping ID
+
+# Decode back
+python -m LipsumLab.li_manager
+# Choose option 2 (Ipsum → Language)
+# Paste themed text (mapping ID auto-extracted)
+# Get original text back!
+```
+
+**In the web app:** Use the "LipsumLab" tab to encode/decode text with a beautiful interface!
+
+### File Upload/Download 📁
+
+**No more copy-pasting!** The web app supports full file operations:
+
+- **Upload key files**: Drag and drop `.id.pub` or `.id.sec` files
+- **Upload messages**: Upload encrypted messages or plaintext files
+- **Download keys**: Get your generated keys as a ZIP file
+- **Download encrypted**: Save encrypted messages as `.fg.asc` files
+- **Download decrypted**: Save decrypted plaintext as `.txt` files
+
+**How to use:**
+1. Click the "Upload" button next to any key/message field
+2. Select your file
+3. The content is automatically parsed and filled in
+4. After encryption/decryption, click "Download" to save results
+
+### Fingerprint Utility 🔍
+
+**Show the fingerprint of any public key!**
+
+Fingerprints are short identifiers (24 hex characters) that uniquely identify a keypair. Use them to:
+- Verify you have the correct recipient's key
+- Share your identity without revealing the full key
+- Check key integrity
+
+**CLI:**
+```bash
+python forgotten_e2ee.py show-fp --pub alice.id.pub
+# Output: abc123def456...
+```
+
+**Web App:** Use the "Show Fingerprint" button in the key generation tab, or the dedicated fingerprint utility.
+
 ### Post-Quantum Hybrid (Optional)
 
 If you install `pqcrypto`, you get **Kyber512** post-quantum encryption mixed with classical crypto. Future-proof your messages against quantum computers (you know, just in case Skynet happens).
+
+### Admin Dashboard 🔐
+
+**For site administrators:** The web app includes a powerful admin system.
+
+**Features:**
+- **Secure Login**: Admin-only access with credentials
+- **Usage Statistics**: Track all API calls, user counts, uptime
+- **Mapping Management**: Access all LipsumLab mapping files (encryption roadmaps)
+- **Theme Customization**: Modify UI colors and styling
+- **Analytics**: View recent API calls, success rates, user IPs
+
+**Access:** Navigate to `/admin/login` on your deployed instance.
+
+**Default Credentials** (change in production!):
+- Username: `admin`
+- Password: Set via `ADMIN_PASSWORD` environment variable
+
+**Security Note:** Mapping files contain the "roadmap" for decryption and are **admin-only** for security. Regular users cannot access them.
 
 ---
 
@@ -351,8 +579,131 @@ This is encryption software. Use it responsibly. We're not responsible for:
 
 ---
 
+## 📖 Complete Usage Guide
+
+### Web App: Step-by-Step Tutorial
+
+#### 1. Generate Your Identity
+
+1. Open the web app (local or deployed)
+2. Go to "🔑 Generate Keys" tab
+3. Enter your name (e.g., "Alice")
+4. (Optional) Enter a passphrase to encrypt your secret key
+5. Click "Generate Keys"
+6. **Download your keys** using the download button (saves as ZIP)
+7. **Save your secret key securely** - you'll need it to decrypt messages!
+
+#### 2. Encrypt a Message
+
+1. Go to "✉️ Encrypt" tab
+2. **Upload or paste** recipient's public key (`.id.pub` file or JSON)
+3. Type or paste your message
+4. **Select a lexicon** (e.g., "English" for normal prose, "Cyberpunk" for sci-fi theme)
+5. (Optional) **Sign the message**: Upload your secret key to add authenticity
+6. Click "Encrypt"
+7. **Download the encrypted message** (saves as `.fg.asc` file)
+8. Share it with your recipient!
+
+#### 3. Decrypt a Message
+
+1. Go to "📬 Decrypt" tab
+2. **Upload or paste** your secret key (`.id.sec` file or JSON)
+3. Enter passphrase if your key is encrypted
+4. **Upload or paste** the encrypted message (`.fg.asc` file or armor text)
+5. **Select the lexicon** used during encryption (must match!)
+6. (Optional) **Verify signature**: Upload sender's public key to verify authenticity
+7. Click "Decrypt"
+8. View your decrypted message!
+9. **Download the plaintext** if needed
+
+#### 4. Use LipsumLab (Themed Ipsum)
+
+1. Go to "🎨 LipsumLab" tab (if available)
+2. **Encode (Language → Ipsum)**:
+   - Enter your text
+   - Select source language
+   - Choose a theme (Latin, Cyberpunk, Biotech, etc.)
+   - Click "Encode"
+   - Copy the themed output (includes mapping ID in header)
+3. **Decode (Ipsum → Language)**:
+   - Paste the themed text
+   - Mapping ID is auto-extracted from header
+   - Click "Decode"
+   - Get your original text back!
+
+#### 5. Show Fingerprint
+
+1. Go to "🔑 Generate Keys" tab
+2. Click "Show Fingerprint" button
+3. Paste a public key (`.id.pub` file or JSON)
+4. View the 24-character fingerprint
+5. Use it to verify key identity!
+
+### Advanced Features Explained
+
+#### Message Signing
+
+**What it does:** Adds a cryptographic signature proving the message came from you.
+
+**When to use:**
+- Important communications where authenticity matters
+- Business transactions
+- Legal documents
+- Any situation where you need to prove you sent the message
+
+**How it works:**
+1. You encrypt with your secret key (signer key)
+2. System creates Ed25519 signature
+3. Recipient verifies with your public key
+4. ✅ = Valid signature, message is authentic
+5. ❌ = Invalid signature, message may be tampered with
+
+#### Signature Verification
+
+**What it does:** Verifies that a signed message actually came from the claimed sender.
+
+**When to use:**
+- When receiving signed messages
+- To detect tampering
+- To verify sender identity
+
+**How it works:**
+1. Message includes signature in armor header
+2. You provide sender's public key
+3. System verifies signature cryptographically
+4. Result shows verification status
+
+#### Lexicon Selection
+
+**What it does:** Chooses the vocabulary theme for steganographic armor output.
+
+**Available lexicons:**
+- `en.txt` - English (default)
+- `de.txt` - German
+- `es.txt` - Spanish
+- `fr.txt` - French
+- `it.txt` - Italian
+- `biotech.txt` - Biotech/scientific terms
+- `cyberpunk.txt` - Cyberpunk/sci-fi theme
+- `english.txt` - Alternative English
+- `fl_custom_full_lexicon.txt` - Custom full lexicon
+
+**Important:** The lexicon used for encryption **MUST** match the lexicon used for decryption, or decryption will fail!
+
+#### Mapping Modes
+
+- **token_map_v1** (default): Original mapping algorithm
+- **token_map_v2** (experimental): Alternative mapping algorithm
+
+Both modes are compatible, but v2 may produce different prose output for the same input.
+
 ## 🎯 Roadmap
 
+- [x] Complete feature parity (CLI → Web App) ✅
+- [x] File upload/download ✅
+- [x] Message signing and verification ✅
+- [x] LipsumLab web interface ✅
+- [x] Admin dashboard ✅
 - [ ] More lexicon options (themes, languages)
 - [ ] Mobile app (maybe?)
 - [ ] Browser extension

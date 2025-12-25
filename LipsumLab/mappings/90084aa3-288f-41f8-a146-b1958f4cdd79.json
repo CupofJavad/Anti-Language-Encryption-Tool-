@@ -1,0 +1,14 @@
+{
+  "id": "90084aa3-288f-41f8-a146-b1958f4cdd79",
+  "created": 1766696277,
+  "source_lang": "en",
+  "theme_key": "en",
+  "theme_name": "En",
+  "note": "forward_map is src_lower -> themed_lower; reverse is derivable.",
+  "forward_map": {
+    "hello": "sink",
+    "world": "level",
+    "test": "hand",
+    "message": "journal"
+  }
+}

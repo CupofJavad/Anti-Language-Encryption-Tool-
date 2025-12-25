@@ -132,6 +132,9 @@
             <button class="tab active" onclick="showTab('keygen')">🔑 Generate Keys</button>
             <button class="tab" onclick="showTab('encrypt')">✉️ Encrypt</button>
             <button class="tab" onclick="showTab('decrypt')">📬 Decrypt</button>
+            <button class="tab" onclick="showTab('lipsumlab')">🎨 LipsumLab</button>
+            <button class="tab" onclick="showTab('config')">⚙️ Config</button>
+            <a href="/admin/login" style="margin-left: auto; padding: 20px; text-decoration: none; color: #667eea; font-weight: 500;">🔐 Admin</a>
         </div>
         
         <div class="content">
@@ -142,8 +145,23 @@
                     <label>Name:</label>
                     <input type="text" id="keygen-name" placeholder="Alice" value="Alice">
                 </div>
+                <div class="form-group">
+                    <label>Passphrase (optional - leave empty for raw keys):</label>
+                    <input type="password" id="keygen-passphrase" placeholder="Enter passphrase to encrypt secret key">
+                    <small style="color: #666;">If set, secret key will be encrypted with this passphrase</small>
+                </div>
                 <button onclick="generateKeys()">Generate Keys</button>
                 <div id="keygen-result"></div>
+                
+                <hr style="margin: 30px 0;">
+                
+                <h3>🔍 Show Fingerprint</h3>
+                <div class="form-group">
+                    <label>Public Key (to show fingerprint):</label>
+                    <textarea id="fp-pubkey" placeholder="Paste public key here (.id.pub file or JSON)" style="min-height: 100px;"></textarea>
+                    <button onclick="showFingerprint()" style="margin-top: 10px;">Show Fingerprint</button>
+                </div>
+                <div id="fp-result"></div>
             </div>
             
             <!-- Encryption -->
@@ -151,7 +169,13 @@
                 <h2>Encrypt Message</h2>
                 <div class="form-group">
                     <label>Recipient Public Key:</label>
-                    <textarea id="encrypt-pubkey" placeholder="Paste recipient's public key here"></textarea>
+                    <div style="display: flex; gap: 10px;">
+                        <textarea id="encrypt-pubkey" placeholder="Paste recipient's public key here (.id.pub file or JSON)" style="flex: 1;"></textarea>
+                        <div>
+                            <input type="file" id="encrypt-pubkey-file" accept=".pub,.json" style="display: none;" onchange="uploadPublicKey('encrypt')">
+                            <button onclick="document.getElementById('encrypt-pubkey-file').click()" style="white-space: nowrap;">📁 Upload</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Message:</label>
@@ -162,6 +186,27 @@
                         <input type="checkbox" id="encrypt-armor" checked> Use steganographic armor (default: enabled)
                     </label>
                 </div>
+                <div class="form-group" id="lexicon-group" style="display: block;">
+                    <label>Lexicon (for armor output):</label>
+                    <select id="encrypt-lexicon" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 4px;">
+                        <option value="">Loading lexicons...</option>
+                    </select>
+                    <small style="color: #666;">Choose the vocabulary theme for prose output (must match during decrypt)</small>
+                </div>
+                <div class="form-group">
+                    <h3>✍️ Message Signing (Optional - Adds Authenticity)</h3>
+                    <label>Signer Secret Key (your secret key to sign the message):</label>
+                    <div style="display: flex; gap: 10px;">
+                        <textarea id="encrypt-signer-secret" placeholder="Paste your secret key here (.id.sec file or JSON)" style="flex: 1; min-height: 80px;"></textarea>
+                        <div>
+                            <input type="file" id="encrypt-signer-file" accept=".sec,.json" style="display: none;" onchange="uploadSecretKey('encrypt-signer')">
+                            <button onclick="document.getElementById('encrypt-signer-file').click()" style="white-space: nowrap;">📁 Upload</button>
+                        </div>
+                    </div>
+                    <label style="margin-top: 10px;">Signer Passphrase (if your secret key is encrypted):</label>
+                    <input type="password" id="encrypt-signer-passphrase" placeholder="Enter passphrase if applicable">
+                    <small style="color: #666;">Signing proves the message came from you. Recipient can verify with your public key.</small>
+                </div>
                 <button onclick="encryptMessage()">Encrypt</button>
                 <div id="encrypt-result"></div>
             </div>
@@ -171,14 +216,158 @@
                 <h2>Decrypt Message</h2>
                 <div class="form-group">
                     <label>Your Secret Key:</label>
-                    <textarea id="decrypt-secret" placeholder="Paste your secret key here"></textarea>
+                    <div style="display: flex; gap: 10px;">
+                        <textarea id="decrypt-secret" placeholder="Paste your secret key here (.id.sec file or JSON)" style="flex: 1;"></textarea>
+                        <div>
+                            <input type="file" id="decrypt-secret-file" accept=".sec,.json" style="display: none;" onchange="uploadSecretKey('decrypt')">
+                            <button onclick="document.getElementById('decrypt-secret-file').click()" style="white-space: nowrap;">📁 Upload</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Passphrase (if your secret key is encrypted):</label>
+                    <input type="password" id="decrypt-passphrase" placeholder="Enter passphrase if applicable">
                 </div>
                 <div class="form-group">
                     <label>Encrypted Message:</label>
-                    <textarea id="decrypt-message" placeholder="Paste encrypted message here"></textarea>
+                    <div style="display: flex; gap: 10px;">
+                        <textarea id="decrypt-message" placeholder="Paste encrypted message here (.fg.asc file or armor text)" style="flex: 1;"></textarea>
+                        <div>
+                            <input type="file" id="decrypt-message-file" accept=".fg.asc,.txt" style="display: none;" onchange="uploadEncryptedMessage()">
+                            <button onclick="document.getElementById('decrypt-message-file').click()" style="white-space: nowrap;">📁 Upload</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Lexicon (used during encryption):</label>
+                    <select id="decrypt-lexicon" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 4px;">
+                        <option value="">Loading lexicons...</option>
+                    </select>
+                    <small style="color: #666;">Must match the lexicon the sender selected for armor output</small>
+                </div>
+                <div class="form-group">
+                    <h3>✅ Signature Verification (Optional)</h3>
+                    <label>Sender Public Key (to verify message signature):</label>
+                    <div style="display: flex; gap: 10px;">
+                        <textarea id="decrypt-sender-pub" placeholder="Paste sender's public key here (.id.pub file or JSON)" style="flex: 1; min-height: 80px;"></textarea>
+                        <div>
+                            <input type="file" id="decrypt-sender-file" accept=".pub,.json" style="display: none;" onchange="uploadPublicKey('decrypt-sender')">
+                            <button onclick="document.getElementById('decrypt-sender-file').click()" style="white-space: nowrap;">📁 Upload</button>
+                        </div>
+                    </div>
+                    <small style="color: #666;">If the message was signed, provide sender's public key to verify authenticity</small>
                 </div>
                 <button onclick="decryptMessage()">Decrypt</button>
                 <div id="decrypt-result"></div>
+            </div>
+            
+            <!-- LipsumLab -->
+            <div id="lipsumlab" class="tab-content">
+                <h2>🎨 LipsumLab - Reversible Themed Ipsum</h2>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Transform any text into themed prose (like Lorem Ipsum), then decode it back perfectly!
+                </p>
+                
+                <div class="tabs" style="margin-bottom: 20px;">
+                    <button class="tab active" onclick="showLipsumTab('encode')" style="padding: 10px 20px;">Language → Ipsum</button>
+                    <button class="tab" onclick="showLipsumTab('decode')" style="padding: 10px 20px;">Ipsum → Language</button>
+                </div>
+                
+                <!-- Encode -->
+                <div id="lipsum-encode" class="lipsum-tab-content">
+                    <h3>Encode: Language → Themed Ipsum</h3>
+                    <div class="form-group">
+                        <label>Source Text:</label>
+                        <textarea id="lipsum-encode-text" placeholder="Enter your text here..." style="min-height: 150px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Source Language Code:</label>
+                        <input type="text" id="lipsum-encode-lang" placeholder="en, de, es, fr, etc." value="en">
+                        <small style="color: #666;">ISO language code (e.g., 'en' for English)</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Theme:</label>
+                        <select id="lipsum-encode-theme" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 4px;">
+                            <option value="en">English</option>
+                            <option value="latin">Latin (Lipsum)</option>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="biotech">Biotech</option>
+                            <option value="de">German</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="it">Italian</option>
+                        </select>
+                        <small style="color: #666;">Choose the vocabulary theme for output</small>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="lipsum-encode-use-lang"> Use theme matching language code
+                        </label>
+                    </div>
+                    <button onclick="lipsumEncode()">Encode to Themed Ipsum</button>
+                    <div id="lipsum-encode-result"></div>
+                </div>
+                
+                <!-- Decode -->
+                <div id="lipsum-decode" class="lipsum-tab-content" style="display: none;">
+                    <h3>Decode: Themed Ipsum → Original Language</h3>
+                    <div class="form-group">
+                        <label>Themed Ipsum Text:</label>
+                        <textarea id="lipsum-decode-text" placeholder="Paste themed ipsum text here (mapping ID will be auto-extracted from header)..." style="min-height: 150px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Mapping ID (optional - auto-extracted if in header):</label>
+                        <input type="text" id="lipsum-decode-mapid" placeholder="Leave empty if mapping ID is in header">
+                        <small style="color: #666;">Mapping ID is usually embedded in the header as [LI-MAP-ID: ...]</small>
+                    </div>
+                    <button onclick="lipsumDecode()">Decode to Original</button>
+                    <div id="lipsum-decode-result"></div>
+                </div>
+            </div>
+            
+            <!-- Configuration & Mappings -->
+            <div id="config" class="tab-content">
+                <h2>Configuration & Mapping Controls</h2>
+                
+                <div class="form-group">
+                    <h3>Encryption Mode</h3>
+                    <label>Mapping Mode:</label>
+                    <select id="config-mode" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 4px;">
+                        <option value="token_map_v1">Token Map v1 (Default)</option>
+                        <option value="token_map_v2">Token Map v2 (Experimental)</option>
+                    </select>
+                    <small style="color: #666;">Controls how tokens are mapped to lexicon words in armor output</small>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Lexicon Configuration</h3>
+                    <p><strong>Lexicon Directory:</strong> <code id="lexicon-dir">Loading...</code></p>
+                    <p><strong>Available Lexicons:</strong> <span id="lexicon-count">Loading...</span></p>
+                    <button onclick="refreshLexicons()" style="margin-top: 10px; padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">🔄 Refresh Lexicon List</button>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Mapping Files</h3>
+                    <p style="color: #666;">
+                        Mapping files contain encryption roadmaps and are <strong>admin-only</strong> for security.
+                        <a href="/admin/login" style="color: #667eea; text-decoration: none;">Login as admin</a> to access mapping files.
+                    </p>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Advanced Options</h3>
+                    <label>
+                        <input type="checkbox" id="config-auto-lexicon" checked> Auto-select lexicon based on language
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="config-verify-lexicon" checked> Verify lexicon hash on decryption
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="config-strict-mode"> Strict mode (fail on any mismatch)
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -193,14 +382,20 @@
         
         async function generateKeys() {
             const name = document.getElementById('keygen-name').value;
+            const passphrase = document.getElementById('keygen-passphrase').value;
             const resultDiv = document.getElementById('keygen-result');
             resultDiv.innerHTML = '<p>Generating keys...</p>';
             
             try {
+                const body = {name: name || 'Anonymous'};
+                if (passphrase) {
+                    body.passphrase = passphrase;
+                }
+                
                 const response = await fetch('/api/keygen', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({name})
+                    body: JSON.stringify(body)
                 });
                 const data = await response.json();
                 
@@ -208,10 +403,45 @@
                     resultDiv.innerHTML = `
                         <div class="result success">
                             <h3>Keys Generated!</h3>
+                            <p><strong>Fingerprint:</strong> <code>${data.fingerprint}</code></p>
                             <p><strong>Public Key:</strong></p>
                             <div class="key-display">${data.public_key}</div>
                             <p><strong>Secret Key (keep this safe!):</strong></p>
                             <div class="key-display">${data.secret_key}</div>
+                            <button onclick="downloadKeys('${name || 'identity}', '${data.public_key.replace(/'/g, "\\'")}', '${data.secret_key.replace(/'/g, "\\'")}')" style="margin-top: 15px;">📥 Download Keys (ZIP)</button>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function showFingerprint() {
+            const pubkey = document.getElementById('fp-pubkey').value;
+            const resultDiv = document.getElementById('fp-result');
+            if (!pubkey) {
+                resultDiv.innerHTML = '<div class="result error">Please paste a public key</div>';
+                return;
+            }
+            resultDiv.innerHTML = '<p>Calculating fingerprint...</p>';
+            
+            try {
+                const response = await fetch('/api/show-fp', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({public_key: pubkey})
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Fingerprint</h3>
+                            <p><strong>Name:</strong> ${data.name}</p>
+                            <p><strong>Fingerprint:</strong> <code style="font-size: 1.2em;">${data.fingerprint}</code></p>
                         </div>
                     `;
                 } else {
@@ -226,26 +456,44 @@
             const pubkey = document.getElementById('encrypt-pubkey').value;
             const message = document.getElementById('encrypt-message').value;
             const armor = document.getElementById('encrypt-armor').checked;
+            const lexicon = document.getElementById('encrypt-lexicon').value;
+            const mode = document.getElementById('config-mode').value;
+            const signerSecret = document.getElementById('encrypt-signer-secret').value;
+            const signerPassphrase = document.getElementById('encrypt-signer-passphrase').value;
             const resultDiv = document.getElementById('encrypt-result');
             resultDiv.innerHTML = '<p>Encrypting...</p>';
             
             try {
+                const body = {
+                    recipient_pub: pubkey,
+                    plaintext: message,
+                    armor: armor,
+                    mode: mode
+                };
+                if (armor && lexicon) {
+                    body.lexicon = lexicon;
+                }
+                if (signerSecret) {
+                    body.signer_secret = signerSecret;
+                    if (signerPassphrase) {
+                        body.signer_passphrase = signerPassphrase;
+                    }
+                }
+                
                 const response = await fetch('/api/encrypt', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        recipient_pub: pubkey,
-                        plaintext: message,
-                        armor: armor
-                    })
+                    body: JSON.stringify(body)
                 });
                 const data = await response.json();
                 
                 if (data.success) {
+                    const signedBadge = data.signed ? '<span style="background: #4CAF50; color: white; padding: 4px 8px; border-radius: 4px; margin-left: 10px;">✍️ Signed</span>' : '';
                     resultDiv.innerHTML = `
                         <div class="result success">
-                            <h3>Encrypted!</h3>
+                            <h3>Encrypted! ${signedBadge}</h3>
                             <div class="key-display">${data.output}</div>
+                            <button onclick="downloadEncrypted('${data.output.replace(/'/g, "\\'")}')" style="margin-top: 15px;">📥 Download Encrypted Message</button>
                         </div>
                     `;
                 } else {
@@ -259,25 +507,52 @@
         async function decryptMessage() {
             const secret = document.getElementById('decrypt-secret').value;
             const encrypted = document.getElementById('decrypt-message').value;
+            const passphrase = document.getElementById('decrypt-passphrase').value;
+            const lexicon = document.getElementById('decrypt-lexicon').value;
+            const senderPub = document.getElementById('decrypt-sender-pub').value;
             const resultDiv = document.getElementById('decrypt-result');
             resultDiv.innerHTML = '<p>Decrypting...</p>';
             
             try {
+                const body = {
+                    secret_key: secret,
+                    encrypted_data: encrypted
+                };
+                if (passphrase) {
+                    body.passphrase = passphrase;
+                }
+                if (lexicon) {
+                    body.lexicon = lexicon;
+                }
+                if (senderPub) {
+                    body.sender_pub = senderPub;
+                }
+                
                 const response = await fetch('/api/decrypt', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        secret_key: secret,
-                        encrypted_data: encrypted
-                    })
+                    body: JSON.stringify(body)
                 });
                 const data = await response.json();
                 
                 if (data.success) {
+                    let sigStatus = '';
+                    if (data.signed) {
+                        if (data.signature_verified) {
+                            sigStatus = '<p style="color: #4CAF50; font-weight: bold;">✅ Signature Verified - Message is authentic!</p>';
+                        } else {
+                            sigStatus = `<p style="color: #f44; font-weight: bold;">❌ Signature Verification Failed${data.signature_error ? ': ' + data.signature_error : ''}</p>`;
+                        }
+                    } else if (data.signed === false) {
+                        sigStatus = '<p style="color: #666;">ℹ️ Message not signed</p>';
+                    }
+                    
                     resultDiv.innerHTML = `
                         <div class="result success">
                             <h3>Decrypted!</h3>
-                            <p>${data.plaintext}</p>
+                            ${sigStatus}
+                            <p style="white-space: pre-wrap;">${data.plaintext}</p>
+                            <button onclick="downloadDecrypted('${data.plaintext.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')" style="margin-top: 15px;">📥 Download Decrypted Text</button>
                         </div>
                     `;
                 } else {
@@ -287,6 +562,332 @@
                 resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
             }
         }
+        
+        // Load configuration
+        async function loadConfig() {
+            try {
+                const response = await fetch('/api/config');
+                const data = await response.json();
+                if (data.success) {
+                    const config = data.config;
+                    document.getElementById('lexicon-dir').textContent = config.lexicon_dir;
+                    document.getElementById('config-mode').value = config.default_mode;
+                }
+            } catch (error) {
+                console.error('Failed to load config:', error);
+            }
+        }
+        
+        async function loadLexicons() {
+            try {
+                const response = await fetch('/api/lexicons');
+                const data = await response.json();
+                if (data.success) {
+                    const encryptLexiconSelect = document.getElementById('encrypt-lexicon');
+                    const decryptLexiconSelect = document.getElementById('decrypt-lexicon');
+                    if (encryptLexiconSelect) {
+                        encryptLexiconSelect.innerHTML = '';
+                        data.lexicons.forEach(lex => {
+                            const option = document.createElement('option');
+                            option.value = lex.path;
+                            option.textContent = lex.display_name;
+                            encryptLexiconSelect.appendChild(option);
+                        });
+                        if (data.default) {
+                            encryptLexiconSelect.value = `lexicons/${data.default}`;
+                        }
+                    }
+                    if (decryptLexiconSelect) {
+                        decryptLexiconSelect.innerHTML = '';
+                        data.lexicons.forEach(lex => {
+                            const option = document.createElement('option');
+                            option.value = lex.path;
+                            option.textContent = lex.display_name;
+                            decryptLexiconSelect.appendChild(option);
+                        });
+                        if (data.default) {
+                            decryptLexiconSelect.value = `lexicons/${data.default}`;
+                        }
+                    }
+                    if (document.getElementById('lexicon-count')) {
+                        document.getElementById('lexicon-count').textContent = data.lexicons.length + ' lexicons';
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load lexicons:', error);
+            }
+        }
+        
+        function refreshLexicons() {
+            loadLexicons();
+            setTimeout(() => {
+                const count = document.getElementById('encrypt-lexicon')?.options.length || 0;
+                if (document.getElementById('lexicon-count')) {
+                    document.getElementById('lexicon-count').textContent = count + ' lexicons';
+                }
+            }, 500);
+        }
+        
+        // File upload handlers
+        async function uploadPublicKey(target) {
+            const fileInput = document.getElementById(target === 'encrypt' ? 'encrypt-pubkey-file' : 'decrypt-sender-file');
+            const textarea = document.getElementById(target === 'encrypt' ? 'encrypt-pubkey' : 'decrypt-sender-pub');
+            const file = fileInput.files[0];
+            if (!file) return;
+            
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                
+                if (data.success && data.type === 'public') {
+                    textarea.value = data.public_key;
+                } else {
+                    alert('Error: ' + (data.error || 'Invalid file'));
+                }
+            } catch (error) {
+                alert('Error uploading file: ' + error.message);
+            }
+        }
+        
+        async function uploadSecretKey(target) {
+            const fileInput = document.getElementById(target === 'decrypt' ? 'decrypt-secret-file' : 'encrypt-signer-file');
+            const textarea = document.getElementById(target === 'decrypt' ? 'decrypt-secret' : 'encrypt-signer-secret');
+            const file = fileInput.files[0];
+            if (!file) return;
+            
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                
+                if (data.success && data.type === 'secret') {
+                    textarea.value = data.secret_key;
+                    if (data.encrypted && target === 'decrypt') {
+                        document.getElementById('decrypt-passphrase').focus();
+                    }
+                } else {
+                    alert('Error: ' + (data.error || 'Invalid file'));
+                }
+            } catch (error) {
+                alert('Error uploading file: ' + error.message);
+            }
+        }
+        
+        async function uploadEncryptedMessage() {
+            const fileInput = document.getElementById('decrypt-message-file');
+            const textarea = document.getElementById('decrypt-message');
+            const file = fileInput.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                textarea.value = e.target.result;
+            };
+            reader.readAsText(file);
+        }
+        
+        // Download functions
+        async function downloadKeys(name, publicKey, secretKey) {
+            try {
+                const response = await fetch('/api/download/keys', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        name: name || 'identity',
+                        public_key: publicKey,
+                        secret_key: secretKey
+                    })
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `${name || 'identity'}_keys.zip`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                } else {
+                    const data = await response.json();
+                    alert('Error: ' + (data.error || 'Download failed'));
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        
+        async function downloadEncrypted(output) {
+            try {
+                const response = await fetch('/api/download/encrypted', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        output: output,
+                        filename: 'message.fg.asc'
+                    })
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'message.fg.asc';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                } else {
+                    const data = await response.json();
+                    alert('Error: ' + (data.error || 'Download failed'));
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        
+        async function downloadDecrypted(plaintext) {
+            try {
+                const response = await fetch('/api/download/decrypted', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        plaintext: plaintext,
+                        filename: 'decrypted.txt'
+                    })
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'decrypted.txt';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                } else {
+                    const data = await response.json();
+                    alert('Error: ' + (data.error || 'Download failed'));
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        
+        // LipsumLab functions
+        function showLipsumTab(tab) {
+            document.querySelectorAll('.lipsum-tab-content').forEach(c => c.style.display = 'none');
+            document.getElementById('lipsum-' + tab).style.display = 'block';
+            document.querySelectorAll('#lipsumlab .tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        async function lipsumEncode() {
+            const text = document.getElementById('lipsum-encode-text').value;
+            const sourceLang = document.getElementById('lipsum-encode-lang').value;
+            const theme = document.getElementById('lipsum-encode-theme').value;
+            const useLangTheme = document.getElementById('lipsum-encode-use-lang').checked;
+            const resultDiv = document.getElementById('lipsum-encode-result');
+            
+            if (!text) {
+                resultDiv.innerHTML = '<div class="result error">Please enter text to encode</div>';
+                return;
+            }
+            
+            resultDiv.innerHTML = '<p>Encoding...</p>';
+            
+            try {
+                const response = await fetch('/api/lipsumlab/encode', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        text: text,
+                        source_lang: sourceLang || 'unknown',
+                        theme_key: theme,
+                        use_lang_theme: useLangTheme
+                    })
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Encoded to Themed Ipsum!</h3>
+                            <p><strong>Theme:</strong> ${data.theme_name} (${data.theme_key})</p>
+                            <p><strong>Mapping ID:</strong> <code>${data.map_id}</code></p>
+                            <p><strong>Output:</strong></p>
+                            <div class="key-display" style="white-space: pre-wrap;">${data.output}</div>
+                            <small style="color: #666;">Keep the header with [LI-MAP-ID: ...] to decode later!</small>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function lipsumDecode() {
+            const themedText = document.getElementById('lipsum-decode-text').value;
+            const mapId = document.getElementById('lipsum-decode-mapid').value;
+            const resultDiv = document.getElementById('lipsum-decode-result');
+            
+            if (!themedText) {
+                resultDiv.innerHTML = '<div class="result error">Please enter themed ipsum text</div>';
+                return;
+            }
+            
+            resultDiv.innerHTML = '<p>Decoding...</p>';
+            
+            try {
+                const response = await fetch('/api/lipsumlab/decode', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        themed_text: themedText,
+                        map_id: mapId || undefined
+                    })
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <h3>Decoded to Original!</h3>
+                            <p><strong>Mapping ID:</strong> <code>${data.map_id}</code></p>
+                            <p><strong>Original Text:</strong></p>
+                            <div class="key-display" style="white-space: pre-wrap;">${data.output}</div>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        // Load everything on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadLexicons();
+            loadConfig();
+        });
     </script>
 </body>
 </html>
