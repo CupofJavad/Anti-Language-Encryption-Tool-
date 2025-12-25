@@ -112,7 +112,7 @@
                 const res = await fetch('/api/encrypt', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({recipient_pub: pubkey, plaintext: message})
+                    body: JSON.stringify({recipient_pub: pubkey, plaintext: message, armor: true})
                 });
                 const data = await res.json();
                 document.getElementById('result').innerHTML = `<div class="result">${data.output}</div>`;

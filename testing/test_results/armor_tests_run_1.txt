@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /Users/Javad/PycharmProjects/Anti-Language Tool/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/Javad/PycharmProjects/Anti-Language Tool/testing
+configfile: pytest.ini
+collecting ... collected 41 items
+
+testing/test_suites/test_armor.py::TestLexiconLoading::test_load_lexicon_from_file PASSED [  2%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_load_lexicon_default_path PASSED [  4%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_load_lexicon_fallback PASSED [  7%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_load_lexicon_removes_duplicates PASSED [  9%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_load_lexicon_strips_whitespace PASSED [ 12%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_lexicon_hash PASSED [ 14%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_lexicon_hash_deterministic PASSED [ 17%]
+testing/test_suites/test_armor.py::TestLexiconLoading::test_lexicon_hash_order_sensitive PASSED [ 19%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_basic PASSED [ 21%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_produces_prose PASSED [ 24%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_deterministic PASSED [ 26%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_different_for_different_ciphertext PASSED [ 29%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_different_for_different_key FAILED [ 31%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_sentence_breaks PASSED [ 34%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_empty_ciphertext PASSED [ 36%]
+testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_large_ciphertext PASSED [ 39%]
+testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_roundtrip PASSED [ 41%]
+testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_handles_punctuation PASSED [ 43%]
+testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_empty_prose PASSED [ 46%]
+testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_wrong_key FAILED [ 48%]
+testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_wrong_lexicon PASSED [ 51%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_emit_armor_basic PASSED [ 53%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_emit_armor_all_fields PASSED [ 56%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_parse_armor_basic PASSED [ 58%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_parse_armor_invalid_format PASSED [ 60%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_parse_armor_missing_begin PASSED [ 63%]
+testing/test_suites/test_armor.py::TestArmorFormat::test_parse_emit_roundtrip PASSED [ 65%]
+testing/test_suites/test_armor.py::TestArmorIntegration::test_full_armor_workflow PASSED [ 68%]
+testing/test_suites/test_armor.py::TestArmorIntegration::test_armor_output_looks_like_prose PASSED [ 70%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_build_buckets_empty_lexicon PASSED [ 73%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_build_buckets_small_lexicon PASSED [ 75%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_build_buckets_large_lexicon PASSED [ 78%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_encode_with_minimal_lexicon PASSED [ 80%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_b64_to_6bit_conversion PASSED [ 82%]
+testing/test_suites/test_armor.py::TestArmorEdgeCases::test_symbols_to_b64_conversion PASSED [ 85%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_encrypt_defaults_to_armor PASSED [ 87%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_encrypt_armor_explicitly_enabled PASSED [ 90%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_encrypt_armor_explicitly_disabled PASSED [ 92%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_encrypt_armor_produces_prose PASSED [ 95%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_decrypt_armor_format FAILED [ 97%]
+testing/test_suites/test_armor.py::TestArmorWebAPI::test_armor_roundtrip FAILED [100%]
+
+=================================== FAILURES ===================================
+____ TestTokenMapEncoding.test_encode_token_map_different_for_different_key ____
+testing/test_suites/test_armor.py:161: in test_encode_token_map_different_for_different_key
+    assert prose1 != prose2
+E   AssertionError: assert 'place service man eye program hand year eye program company family kind. system week number money.' != 'place service man eye program hand year eye program company family kind. system week number money.'
+_____________ TestTokenMapDecoding.test_decode_token_map_wrong_key _____________
+testing/test_suites/test_armor.py:267: in test_decode_token_map_wrong_key
+    assert recovered != original_ciphertext
+E   AssertionError: assert b'Secret message' != b'Secret message'
+__________________ TestArmorWebAPI.test_decrypt_armor_format ___________________
+testing/test_suites/test_armor.py:622: in test_decrypt_armor_format
+    assert data['success'] == True
+E   assert False == True
+_____________________ TestArmorWebAPI.test_armor_roundtrip _____________________
+testing/test_suites/test_armor.py:651: in test_armor_roundtrip
+    assert data['success'] == True
+E   assert False == True
+=========================== short test summary info ============================
+FAILED testing/test_suites/test_armor.py::TestTokenMapEncoding::test_encode_token_map_different_for_different_key - AssertionError: assert 'place service man eye program hand year eye program company family kind. system week number money.' != 'place service man eye program hand year eye program company family kind. system week number money.'
+FAILED testing/test_suites/test_armor.py::TestTokenMapDecoding::test_decode_token_map_wrong_key - AssertionError: assert b'Secret message' != b'Secret message'
+FAILED testing/test_suites/test_armor.py::TestArmorWebAPI::test_decrypt_armor_format - assert False == True
+FAILED testing/test_suites/test_armor.py::TestArmorWebAPI::test_armor_roundtrip - assert False == True
+========================= 4 failed, 37 passed in 0.33s =========================

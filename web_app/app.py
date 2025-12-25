@@ -115,7 +115,8 @@ def api_encrypt():
         data = request.get_json() or {}
         recipient_pub_json = data.get('recipient_pub')
         plaintext = data.get('plaintext', '')
-        armor = data.get('armor', False)
+        # Default to armor=True (steganographic prose output is the main feature)
+        armor = data.get('armor', True)
         lexicon_path = data.get('lexicon')
         
         if not recipient_pub_json:
@@ -184,10 +185,13 @@ def api_encrypt():
         # Armor with steganography
         if lexicon_path and os.path.exists(lexicon_path):
             tokens = load_lexicon(lexicon_path)
-        elif DEFAULT_LEXICON:
+        elif DEFAULT_LEXICON and DEFAULT_LEXICON.exists():
             tokens = load_lexicon(str(DEFAULT_LEXICON))
         else:
-            return jsonify({'success': False, 'error': 'Lexicon required for armor mode'}), 400
+            # Fallback to default lexicon loading (uses fallback if needed)
+            tokens = load_lexicon(None)
+            if not tokens or len(tokens) < 64:
+                return jsonify({'success': False, 'error': 'Lexicon required for armor mode. Please ensure lexicons/en.txt exists.'}), 400
         
         lxref = lexicon_hash(tokens)
         prose = encode_token_map(ct, key, nonce, tokens)
@@ -205,6 +209,7 @@ def api_encrypt():
         }
         if pq_ct:
             hdr_fields["PQ"] = b64u_enc(pq_ct)
+        # Include Ciphertext-B64 for decryption compatibility
         hdr_fields["Ciphertext-B64"] = b64u_enc(ct)
         armor_output = emit_armor(hdr_fields, prose)
         
@@ -286,18 +291,40 @@ def api_decrypt():
             # Decode token map to get ciphertext (if using armor)
             if lexicon_path and os.path.exists(lexicon_path):
                 tokens = load_lexicon(lexicon_path)
-            elif DEFAULT_LEXICON:
+            elif DEFAULT_LEXICON and DEFAULT_LEXICON.exists():
                 tokens = load_lexicon(str(DEFAULT_LEXICON))
             else:
-                return jsonify({'success': False, 'error': 'Lexicon required for armor decryption'}), 400
+                # Fallback to default lexicon loading
+                tokens = load_lexicon(None)
+                if not tokens or len(tokens) < 64:
+                    return jsonify({'success': False, 'error': 'Lexicon required for armor decryption. Please ensure lexicons/en.txt exists.'}), 400
             
-            # Decode token map
-            decoded_ct = decode_token_map(prose, tokens)
+            # Decode token map (verify it matches Ciphertext-B64)
+            decoded_ct = decode_token_map(prose, key, nonce, tokens)
             if decoded_ct != ct:
                 return jsonify({'success': False, 'error': 'Token map decode mismatch'}), 400
             
             # Decrypt
-            header_bytes = b""  # Simplified for armor mode
+            # Reconstruct AAD to match encryption
+            # Encryption uses: header_bytes + eph_pub + (len(pq_ct).to_bytes(2, "big") + pq_ct if pq_ct else b"")
+            # We need to reconstruct the exact header_bytes that were used during encryption
+            from forgotten_e2ee.fmt import FGHeader
+            from forgotten_e2ee.util import now_s
+            # Reconstruct transcript hash for header (must match encryption)
+            transcript_for_header = _transcript(sender_fp, recip_fp, eph_pub)
+            thash = hkdf(b"fg-v1|th", transcript_for_header, b"", 32)
+            # Reconstruct header exactly as it was during encryption
+            header = FGHeader(
+                version=1,
+                flags=0x01 if pq_ct else 0x00,
+                ts_unix=int(hdr.get("Ts", str(now_s()))),
+                sender_fp=sender_fp,
+                session_id=int(hdr.get("Session", "0")),
+                seq=int(hdr.get("Seq", "0")),
+                nonce=nonce,
+                transcript_hash=thash
+            )
+            header_bytes = header.to_bytes()
             aad = header_bytes + eph_pub + (len(pq_ct).to_bytes(2, "big") + pq_ct if pq_ct else b"")
             pt = aead_decrypt(key, nonce, aad, ct)
             
@@ -308,6 +335,9 @@ def api_decrypt():
                 'plaintext': plaintext
             })
         except Exception as armor_error:
+            import traceback
+            armor_error_msg = str(armor_error) or repr(armor_error)
+            armor_traceback = traceback.format_exc()
             # Try binary format
             try:
                 raw = b64u_dec(encrypted_data)
@@ -348,7 +378,8 @@ def api_decrypt():
             except Exception as binary_error:
                 return jsonify({
                     'success': False,
-                    'error': f'Armor error: {str(armor_error)}; Binary error: {str(binary_error)}'
+                    'error': f'Armor error: {armor_error_msg}; Binary error: {str(binary_error)}',
+                    'armor_traceback': armor_traceback[:1000] if 'armor_traceback' in locals() else ''
                 }), 500
     except Exception as e:
         import traceback
