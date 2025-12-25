@@ -1,0 +1,42 @@
+Prior to V-QND develpment, it was common to think that quantum mechanics
+put severe restrictions on the minimal disturbance of the system due to the measurement procedure. Well, 
+this is not true, and if QKD systems and quantum cryptography relies on that belief I'm afraid V-QND makes 
+bad, very bad news for those systems. There is no secure cryptographic system. Never were
+
+all existing encryption algorithms can be 
+cracked by mathematical improvements; quantum cryptography, on the other hand,
+has nothing to do with mathematics. It is based on the assumption that it is impossible to clone an 
+unknown quantum state and it is impossible to extract information about 
+non-orthogonal quantum states without perturbation. However, this is only true 
+if time is a continuum, which is not. Discrete quanta of time - chronons - allow 
+any measurement performed by an attacker to keep unchanged the 
+quantum state of the information carrier, turning vulnerable any QKD system
+
+I think we misunderstood the very essence of quantum mechanics when we thought 
+quantum key distribution systems could never be hacked. You see, the way to
+grab the information en-route is based on so-called Vaidman's quantum non-demolition 
+box (V-QND). The device measures the photon in a time interval shorter than the 
+time required to alter it, and then passes it along
+
+It is accepted that a 'precise' measurement in the microscopic world is not possible without the 
+introduction of a perturbation or back action inherent to the very fact of 'measurement', 
+but what we now see in our experiments is the fact that this axiom is only true, provided you 
+do not mess around with the fundamental concept of 'time'. In other words, the time 
+it takes to make a measurement is also a factor to bear in mind; you have a very narrow 
+opportunity to measure some property of the entangled photon without destroying the entanglement
+
+the ultimate limitations to the non-destructive
+extraction of information encoded in a laser beam were overcome 
+in recent experiments using novel devices, such as third-order nonlinear detectors, 
+quantum cavities arrays, and memoryless quantum mirrors. Right now no
+commercial quantum key distribution system is secure against the V-QND attack
+
+SV17q team has demonstrated experimentally that the detectors in all commercially available QKD systems
+can be fully remote controlled allowing to tracelessly acquire the full secret key
+
+... it is a smart variation of the the time shift attack, based both on detector efficiency
+mismatch, and the Vaidman box's property called interaction-free measurement by virtue of 
+which it is possible to ascertain the existence of an object in a given region of space without interacting with it. 
+More specifically, the latest development of the V-QND device allows the measurement 
+of the entangled photon properties without any prior information about the photon and without 
+demolishing the entanglement

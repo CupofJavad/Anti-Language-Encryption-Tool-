@@ -1,0 +1,20 @@
+Our current problem is the old problem, you see. Civilians will sooner or later be in a position to easily detect artificial transmitters and to track nearby, fast-moving Denebian probes. We invest a lot of resources and money in studying these objects but, to be honest, our dream is to reach out there and bring one of them home for analysis, and to do it without civilians being aware of what are we doing
+
+The idea of attaching probabilities to what we see and feel is certainly unnerving, yet it seems this is the only way communication with them works
+
+The probability of a theory is derived by evaluating the truth conditions of its component statements. Your problem is that your theory starts off from an obeservation - 'there is a Denebian probe' - which has a truth condition you cannot prove
+
+It is not just ambiguous because the observation has several interpretations. We can cope with that. It is ambiguous because we are not even sure of what we are seeing. And no, we cannot cope with that
+
+One important question regarding ambiguity of the phenomena is how we ought to represent ambiguities. The mere question of whether is it real or unreal signals a turning point in our logic. Facts are objective, but the logic you use to understand them is clearly species-bound. The logic jelly fishes use has nothing to do with that of humans
+
+The question is
+how to compute the probability that a star with present
+astrometric properties
+has ejected in the
+past, a body that entered into the solar system with
+heliocentric orbital elements
+at a given
+reference epoch, and compare that result with the one obtained from the computation that a star system hosting an Earth-size planet in the habitable zone has sent a probe in the past that entered our solar system with that same heliocentric orbital elements at a given reference epoch. And when you do your numbers, you discover there is only one possible origin. Do your computations, and convince yourself
+
+We know what 'Oumuamua really is just because we have detected other Denebian probes in the past. We already know embedding a beacon inside a rock is the best way to withstand the extreme environmental conditions of outter space. 'Oumuaumua comes exactly from the same region from where all Denebian probes are known to come. It has the same features we see in all other Denebian probes. But unlike what we have seen in the past, its flyby near the main Denebian swarm did not trigger a realignment of the other probes. This tells us that, for some reason, 'Oumuamua was either not intended to join the swarm or was experiencing a malfunction

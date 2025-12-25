@@ -1,0 +1,19 @@
+Recent work demonstrates the ability to decode the actor of an event using personality traits. Hassabis et al. (2013) demonstrate the ability to recover the identity of an imagined actor from that actor’s personality. Subjects are informed of the two distinguishing binary personality traits of four actors. During fMRI, they are presented sentences orthographically which describe an actor performing an action
+
+The subjects are asked to imagine this scenario with this actor and to rate whether the actions of the actor accurately reflect the personality of that actor. The resulting brain activation corresponding to these two binary personality traits is used to recover the identity of the actor. No prior work has recovered the identity of an actor without relying on that actor’s personality. In the work presented here, the personality of the actor has no bearing on the actions being performed
+
+Their brains are imaged via fMRI and measured neural activation is decoded to recover the verb that the subjects are thinking about. Decoding is done by means of a support vector machine (SVM) trained on brain scans of those same verbs. We know of no other work that decodes brain activity corresponding to verbs
+
+We find evidence that suggests underlying neural representations of mental states are independent and compose into sentences largely without modifying one another. We have demonstrated that it is possible to read a subject’s brain activity and decode a complex action tableau corresponding to a sentence from its constituents. To do so, we showed novel work which decodes brain activity associated with verbs and simultaneously recovers lexical aspects of different parts of speech
+
+The work is supported by Army Research Laboratory (ARL) Cooperative Agreement W911NF-10-2-0060
+
+NTT is a defector. That's more than we ever expected. But to all effects we cannot communicate with NTT, so nothing is gained
+
+The aim of the program is to be able to read a person's thoughts directly from their brain activity. This technology will change the way PSYOP is currently conducted. For the civilians, it will impact the way they buy and consume because the offer will match their decoded mental states. Brain reading is simply brain imaging, more specifically mapping from brain activity patterns to thoughts, but the difference is that we now can do this
+at a distant
+, and no need to use fMRI
+
+The system literally maps out your ideas. And next stage is to read your dreams; knowing what you're thinking is not the goal, the goal is knowing what you are dreaming about. But yes, you're right, this is a nosy civilization, we want to know everything about everyone any time. Being curious is one thing, being nosy is quiet another. There is a danger in all this, we know. The danger of full mental control, the unsolicited reading of your brain, but on the other hand if we don't learn how to read the brain today, how could we learn to avoid hostile species from reading our minds? Call us paranoids, it is in the nature of the military mind to be paranoid, anyway
+
+It is a waste of time and money. Look, brain imaging is just the visualization of what areas in your brain activate when exposed to certain stimuli. This is basically mapping what channels in your brain show an increase in oxygen intake. The tests we've done with subjects from Skid Row and Lyell Avenue made us conclude the entire program is useless. When on drugs, your brain is just a chaos and there is no way to map anything in it. Period. Meditation techniques allow you to control the level of oxygen in your brain, so you can trick the brain reading strategy at will. As a PSYOP tool we see no future in brain imaging. However, NTT was non-human, so maybe the technique works, who knows? I just hope aliens are not on drugs..

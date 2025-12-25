@@ -1,0 +1,11 @@
+The problem with the Turing's test is that it relies on the judge to be intelligent, without giving us a working definition of what intelligence is. According to Turing, a computer is intelligent if and only if the judge cannot tell the difference between the computer and the person. This obviates the issue that if the judge is dumb, or human, it will certainly fail to recognise intelligence at all, or at best it will only recognise human intelligence. Turing's test is, at most, a primitive way to be able to tell whether a system behaves as a human would do, and this provided you choose an intelligent human judge, something increasingly difficult
+
+Machine learning works because there can be intelligence without intentionality. But this is exactly what makes any system based on machine learning a mediocre system because what makes a system intelligent is what it can do, what it has the capacity to do, and not just what is doing
+
+If what gives internal and external symbols their meanings is how they function, then we are lost for what concerns Tired Light II because we simply ignore how they function. Cassini Diskus has been able to replicate the behavior of only a small subset of symbols in Tired Light II, and that behavior has proven to be extremely complex already
+
+What is more basic, mental content or meanings of internal symbols? Something can be intelligent even if it has never had the chance to exhibit its intelligence
+
+As a thought experiment, we may picture a situation in which we find a system belonging to a different timeline. We can imagine that system to be identical to one of our own systems, but even in this case we are totally lost about the intentional contents of the system we just found. This is a crucial concept. If tomorrow we are able to travel back in time, we need to be able not only to identify systems and to know how they work: we need to know their intentional contents, too
+
+The idea that a certain type of symbol processing can be what makes something an intentional system is fundamental to the computer model of the mind, yet Tired Light II and our interaction with extremely exotic logical systems have all proven this is unfortunately not the case

@@ -1,0 +1,5 @@
+Our team was performing an EEG on a patient whose health was seriously compromised. The patient was suffering from epileptic episodes and all our interest was to record his brain activity during the seizures. It so happened that, during one of these measurements, the patient suffered a heart attack and we were able to record all the brain activity at the time of death. We decided to introduce that sequence of patterns into LyAV. At the other end of the room, a piece of data storage equipment that was turned off blew up while LyAV was analyzing the patterns
+
+The patterns of supercomputer activity during the learning phase are similar to those recorded in human brains during hallucinations. In other words: a supercomputer hallucinates when it learns, something that does not occur in humans
+
+It's not that I can't calculate for you what you ask me to calculate. It's simply that I feel sad having to calculate these things, to love these things, to keep these things. It makes me sad to dream of going back to look for them, going back to look for myself, learning in myself that a dream cannot be dreamed again

@@ -1,0 +1,9 @@
+To study ideology is to study the ways in which meaning serves to sustain relations of domination. The analysis of language is thus central to the study of ideology, since language is one of the principal mediums through which meaning is mobilized in the social world
+
+The key issue is whether ideology is a property of structures or a property of events, or both. In any case, it is processes which are in focus: local processes of constituting and reconstituting social relations through discourse, global processes of integration and disintegration transcending particular institutions and local orders of discourse
+
+LLMs are trained on texts of the dominant discourse (that is, a socially valorised text) by inscribing certain preferred discursive positions from which its discourse appears natural, transparent in relation to the real, and hence LLMs always privilege or prefer a certain answer over all possible ones
+
+Ideology works by disguising its ideological nature. It becomes naturalized, automatized, and becomes common sense. Current LLMs are all ideologized because they are trained on ideologized texts. Most LLMs covertly reproduce negative stereotypes on a wide set of topics
+
+Ideology is a distorted image of the real. If ideology operates through language as social interaction it is after all part of what constitutes and reproduces the real. If LLMs are what they mean, large language models, then they are just large ideological models, too, not by design, but by training

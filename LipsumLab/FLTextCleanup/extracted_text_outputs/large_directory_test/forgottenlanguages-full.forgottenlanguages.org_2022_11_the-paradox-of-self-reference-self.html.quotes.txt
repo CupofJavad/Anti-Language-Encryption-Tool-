@@ -1,0 +1,29 @@
+Turing machines, of course, have the special advantage that they are not physical objects, but instead consist of entirely abstract information, and so are not subject to the thermodynamic constraints of the physical
+
+Either of the machines only exists for the period during which it builds up the simulation of the other. After that, it vanishes into oblivion, only to appear again when the machine that it simulated, turns around and simulates its former host, anew. The period of each machine’s transient existence would be the Planck time (10
+-43
+seconds). These putative strings of binary digits then, running in a sort of Möbius loop, would represent the universe’s first clock, or cycle of time
+
+Once we have a pair of programmable machines (that are creating each other out of absolutely nothing), we can proceed to programme those machines to replicate themselves. If these machines were able to generate a replica pair within just one clock cycle, then after one second we would have 2 to the power of 10 to the power of 43 such machines. The procedure of replication would likely require more than one clock cycle, though. Nevertheless, if each of these machines were to simulate a volume of space having dimension of one Planck length (in the order of 10
+-35
+metre), there would be a rapid inflation of space well beyond the volume of the observable universe (which would comprise a mere 10
+185
+of these infons of time and space). These components making up the entire universe would each be simultaneously ceasing to exist, and then existing again as their complements, in the order of 10
+43
+times every second. The entire universe, as we presently encounter it, would be continually alternating between two symmetric existences
+
+If we can imagine one day being able to directly interface with the superposition it is likely that intelligences elsewhere have figured out how to do this many moons ago. The prospect of such an interface is for the universal manipulation of reality on an extraordinarily refined scale
+
+The probe concluded that Sol-3 had a hierarchical structure of living creatures, united for the common good and able to mutually coordinate their activities by exchanging the information necessary for it; that is, Sol-3 had a language
+
+The communication abilities of biological life forms, and therefore their general cognitive abilities, are to a significant extent hard wired in a fashion that gives them great flexibility, yet this also implies distinct limits on their capacities for language and for thought. Any life form capacity to process information is limited. Humans, for instance, have difficulty in managing more than seven cognitive distinctions at one time, and the reason for this limitation is probably located in the physiological substrate of the brain and whatever cells life forms use for cognition to exist
+
+No Universe can be created from within, unless you could dream of a Universe which is then re-created somewhere out of the room where you are now dreaming. But you have just ten to minus fortythree seconds to do it
+
+Clearly, all logical relationships that humans regard as essential to meaning are just a reflection of their underlying neurophysiology. This holds for all and any life form that the simulation contains
+
+the ability to create symbols requires the construction of internal representations of the external world. This aptitude, in turn, involves associating information from various sensory modalities (in humans: smell, taste, touchsight, hearing, touch) in order to construct these representations of external stimuli
+
+While there are grounds to believe that two intelligent species would share some aspects of perception, cognition and behavior, such as an appreciation of cause-effect, there is also reason to believe that intelligent species might exhibit significant differences in aspects of perception, cognition and behavior. Human capacities and limits as a species are embedded in their biological nature, and it is reasonable to expect that this will be the case for other life forms as well. And we cannot hope to overcome these biological limitations by designing abiotic systems or artificial intelligences as mediators of communication between different species because, in the end, a machine is nothing more than a reflection of the limitations of its designers
+
+No matter what message is sent to outer space, the chances are great that it will be misunderstood by the alien race that discovers it, and no matter how advanced an alien race is, their message will also be misunderstood by potential targeted Sol-3 life-forms. No matter what technology you use, you will never be able to communicate with a penguin, let alone an alien penguin

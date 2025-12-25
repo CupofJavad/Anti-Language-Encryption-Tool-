@@ -1,0 +1,1 @@
+Data in DNA is stored in a volumetric fashion which gives access to more storage options unlike present mediums which store data in a linear order

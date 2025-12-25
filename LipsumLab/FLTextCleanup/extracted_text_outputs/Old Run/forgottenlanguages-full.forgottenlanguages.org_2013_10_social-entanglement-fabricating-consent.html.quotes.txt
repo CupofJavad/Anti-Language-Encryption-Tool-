@@ -1,0 +1,3 @@
+
+U.S. patent number 5830064
+: A method and apparatus of generating values and detecting Whether the values fall outside chance probabilities. In one embodiment, a random-noise source provides a signal that is amplified, conditioned, and sampled to provide a series of random numbers. In one embodiment, conditioning includes inverting some of the values according to a pseudo-random sequence mask in order to remove certain first-order bias. Another aspect of this invention is to perform a statistical analysis of the values generated, and to control an output based in whether or not a chance expectation has been exceeded, or by the probability of a certain result obtained

@@ -1,0 +1,1 @@
+Old worlds may break when they encounter the new syntax. However, we require that the old syntax to be still valid

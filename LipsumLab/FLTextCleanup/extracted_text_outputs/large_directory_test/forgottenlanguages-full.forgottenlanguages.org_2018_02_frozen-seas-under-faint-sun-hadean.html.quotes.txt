@@ -1,0 +1,17 @@
+The goal of the Hadean mission is not just to fast forward Sol-3 to a precambrian state, but to modify the development of complex life that will evolve on its own due to the substantial levels of O
+2
+that may be expected by the time the probes arrive. We don't aim at a self-evolving biosphere but at a designed biosphere. This is a crucial mission goal
+
+Seeding requires to target those planets that already sustain an oxygen bearing atmosphere because it takes of the order of a few Ga for them to do so, if at all. Sol-3 atmosphere was already rich in O
+2
+, and that made Sol-3 a perfect candidate for seeding
+
+A malfunction in the probe failed to deliver these sub-millimeter animals to their proper habitats. The consequence was the development of highly unefficient life forms, which called for a resetting plan in order to guarantee their extinction. Another possibility is that the target planet were other than Sol-3, like Alpha Mensae-4, and that Sol-3  was just a target of opportunity
+
+Only when you have evidence that the resulting biosphere is compatible with higher life forms should you start the second stage of the seeding strategy
+
+The simplest design for the seeding process would be the from-orbit delivery via nano-sized reentry capsules, which could be in turn ejected backwards at high velocities, viz decelerated with respect to the orbital motion of the main Genesis probe, by a compact railgun. A minimal heat shield would then be enough to protect the content of the delivery capsules during the subsequent drop to the surface. Key to the success prospects of the Genesis mission is capability of the probe to use a databank of terrestrial genomes for the selection of the right mix of microbes to be synthesized in situ by the on-board gene laboratory
+
+No, the probes didn't prove that Sol-3 was an uninhabited world. In fact, they detected biosignatures. This implies that an ethical problem had to be solved before seeding, and it seems the on-board AI took the decision to first wipe out those indigeneous life forms
+
+waves of origination

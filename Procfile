@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT --chdir web_app app:app
+web: gunicorn --config gunicorn_config.py --chdir web_app app:app

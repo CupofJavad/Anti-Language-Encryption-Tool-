@@ -1,0 +1,143 @@
+On Rational Betting Systems
+
+Bayesianism, Infinite Decisions and Binding
+
+On Generalized Means and Generalized Convex Functions
+
+Bayesian Statistics and the Efficiency and Ethics of Clinical Trials
+
+Optimal Bayesian Randomization
+
+Coherent Statistical Inference and Bayes Theorem
+
+Coherent Odds and Subjective Probability
+
+On De Finetti Coherence and Kolmogorov Probability
+
+Discussion of Scoring Rules and the Evaluation of Probabilities
+
+A Generalization of the Quasilinear Mean with Applications to the Measurement of Income Inequality and Decision Theory Resolving the Allais Paradox
+
+Sul concetto di media
+
+Clever Bookies and Coherent Beliefs
+
+Incentive Contracts and Strictly Proper Scoring Rules
+
+Expert Judgement Elicitation for Risk Assessments of Critical Infrastructures
+
+In Defence of the Dutch Book Argument
+
+Alcune lettere giovanili di B. de Finetti alla madre
+
+Randomness, Unpredictability, and Absence of Order: The Identification by the Theory of Recursivity of the Mathematical Notion of Random Sequence
+
+Upper and Lower Probabilities Induced by a Multivalued Mapping
+
+Finite Forms of de Finetti's Theorem on Exchangeability
+
+De Finetti's Generalizations of Exchangeability
+
+Deriving Harsanyi's Utilitarianism from De Finetti's Book-Making Argument
+
+Dutch Books: Avoiding Strategic and Dynamic Complications and a Comonotonic Extension
+
+Conditional Probability and Dutch Books
+
+Finitely Additive Conditional Probabilities, Conglomerability and Disintegrations
+
+Conditional Objects as Nonmonotonic Consequence Relationships
+
+Twenty-one Arguments against Propensity Analyses of Probability
+
+Dutch Book against Some Objective Priors
+
+A Radon-Nikodym Theorem for Finitely Additive Set Functions
+
+Applications of de Finetti's Theorem to Inductive Logic
+
+Anti-realism in the Philosophy of Probability: Bruno de Finetti's Subjectivism
+
+Manipulation of Voting Schemes: A General Result
+
+Expected Utility with Purely Subjective Non-Additive Probabilities
+
+Probabilistic Forecasts, Calibration and Sharpness
+
+Strictly Proper Scoring rules, Prediction and Estimation
+
+The Well Calibrated Bayesian: Comment
+
+Statistical Implications of Finitely Additive Probability
+
+Randomization in a Bayesian Perspective
+
+Sur la notion de la moyenne
+
+Probabilities of Conditionals and Conditional Probability
+
+The Well Calibrated Bayesian: Comment
+
+The Philosophy of Statistics
+
+Representation Theorem of the de Finetti Type for (Partially) Symmetric Probability Measures
+
+A Simple Test of Expected Utility Theory Using Professional Traders
+
+Longitudinal and Repeated Cross-Sectional Cluster-Randomization Designs Using Mixed Effects Regression for Binary Outcomes: Bias and Coverage of Frequentist and Bayesian Methods
+
+Introduction to a General Theory of Elementary Propositions
+
+A Theory of Anticipated Utility
+
+The Axiomatic Basis of Anticipated Utility: A Clarification
+
+Truth and Probability
+
+'Everybody Makes Errors': The Intersection of De Morgan's Logic and Probability, 1837–1847
+
+Non-Standard Analysis
+
+Bruno de Finetti: the Mathematician, the Statistician, the Economist, the Forerunner
+
+Bayesian Inference for Causal Effects: The Role of Randomization
+
+Mathematics and the Metaphysicians
+
+On Stationary Sequences of Random Variables and the de Finetti Equivalences
+
+Strategy-proofness and Arrows Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions
+
+A General Method for Comparing Probability Assessors
+
+Two Measures of Incoherence: How Not to Gamble if You Must
+
+On Testing the Validity of Sequential Probability Forecasts
+
+Axiomatic Characterization of the Quadratic Scoring Rule
+
+Coherence and the Axioms of Confirmation
+
+Dutch Books and Agent Rationality
+
+The Role of Experimental Randomization in Bayesian Statistics: Finite Sampling and Two Bayesians
+
+Finitely Additive Priors, Coherence and theMarginalization Paradox
+
+A New Proof of the Impossibility of Hidden Variables Using the Principles of Exchangeability and Identity of Conditional Distributions
+
+Bachelier and His Times: A Conversation with Bernard Bru
+
+Conditionalization and Obervation
+
+On Popper's Definitions of Verisimilitude
+
+Arbitrage and the Dutch Book Theorem
+
+La pi`u recente definizione della Matematica
+
+Belief and theWill
+
+A Characterization of the General Mean
+
+R. A. Fisher on the History of Inverse Probability

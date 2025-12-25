@@ -1,0 +1,1 @@
+LyAV is able to learn semantics from corpus data by concurrently executing several algorithms. One way this is achieved is based on the central idea of limiting the number of denotations under consideration and define a probabilistic generative model for interpretations

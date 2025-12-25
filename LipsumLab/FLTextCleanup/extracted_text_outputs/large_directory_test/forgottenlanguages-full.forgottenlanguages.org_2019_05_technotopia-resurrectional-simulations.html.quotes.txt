@@ -1,0 +1,24 @@
+a world W’ is the simulation of the world W, if it provides the same observations as the world W using 
+fewer computations than the intelligent observer expects based on his internal model of W
+
+If Giselians start a simulation of their past but committ to terminate the simulation if it becomes nested
+(the simulation starts a simulation), they basically have given themselves the death penalty, as they mostl likely are 
+already in such a simulation
+
+if there are many more simulated realities than non-simulated ones, and if both are indistinguishable from each other, 
+then we are probably in a simulated reality. However, what about dreamers and the dreamed ones? Are the dreamed ones aware of 
+being dreamed by the dreamers? Denebians surely know that the measure of existence of a mind is equal to the energy of computations 
+used for its simulation, much as we know the measure of existence of a dream is equal to the time the dream lasts. As dreamers, 
+we choose when to terminate a dream (putting an end to Dreamland no matter how terrible that is for the dreamed ones) much as the 
+creators of Sol-3 simulation can choose to terminate their simulation at any time without warning
+
+in that particular simulation DENIED discovers that cell phones being manufactured by DENIED 
+carry a firmware that, under specific conditions, causes the cell phone to explode. The software 
+executes a module that overheats critical components which are in touch with the DENIED explosive. 
+The company is fully funded by SoftBank and the target market was China
+
+according to the simulation, Ampere Computing produced millions of explosive 64-bit ARM server processors 
+that by 2025 were present in all hyperscale cloud providers all over the world. The simulation then 
+modeled what would happen when the triggering signal is embedded inside a BeiDou satellite GPS signal, that is, 
+what would happen if all active cell phones in the world explode at the same time, leaving millions of fatal casualties 
+and severely injured users, plus all of the cloud providers being suddenly disrupted

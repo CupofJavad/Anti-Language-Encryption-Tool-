@@ -1,0 +1,10 @@
+biological life forms, more specifically insects and birds, make for excellent biomonitoring sensors within the mil-IoNT global network. Monitoring large populations require innovative sensors which, once integrated within the 5G framework, will ensure mass social control
+
+The deployment of the first bio-cyber units, based on Vespa mandarina, serves as a way to operationally test our algoruthms of swarm intelligence and to exercise the new communication protocols bith between the swarm members and the NFC. Vespa mandarina was chosen for many resaons, especially because of its size - which make them amenable to incorporate bigger antennas and sensing devices - and its fearsome look
+
+we made the decision to move from pure biosensors to bio-cyber units after our past experience with genetically modified insects in which we introduced addiction. The idea was that by inducing addiction in insects we could open up a new world of biosensor possibilities, ranging from landmine and drug detection to early medical diagnoses. The experiments were promising, but they clearly showed that inducing addiction in insects is a very very bad idea, believe me
+
+Sadly, we have not yet reached a point in which we could create artificial copies of
+Musca domestica fitted with SigInt capabilities. Robot wasps are a different thing, though. They have proven an interesting avenue of research for military purposes
+
+SV06n is not interested in the cognitive capabilities of insects, neither in using them as computational models for next AI paradigms. They are interested in using them passively, that is, inserting simple sensors in their bodies, releasing them into the environment, and taking advantage of the 5G network to receive data which is further analyzed by AI algorithms. The kind of data they gather is basically data about people, where they are at a specific time, and with whom

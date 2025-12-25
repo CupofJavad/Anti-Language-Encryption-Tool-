@@ -1,0 +1,69 @@
+She worked in the strange regions in which she chose to be lonely. At least, that's how we call 
+the offices in the East building, where the most solitary and clever cryptoanalysts are allocated. 
+Office DENIED is strange and desolate. It is meant for what is meant: to break all current and future 
+encryption algorithms. That's what they do there, and that's what she was working on at that point
+
+I recall the words she said to us before she got terminated. She said she was just an actress, 
+and that her body was trained, you know, to lie, to fall, as she chooses. She said we all at DENIED 
+are trained that way
+
+In the most difficult case, we have Cassini Diskus signals; below that level we only work we 
+ciphertext only, and no knowledge of the input. LyAv works under the sacred principle that 
+the input is effectively non-random. Do not forget we build chips which are at the heart of each and 
+every computer and electronic device on this planet, and we take too seriously to design them to 
+never ever generate truly random numbers. On the other hand, all encryption algorithms have a 
+backdoor. By design. Thus, LyAv can tell by simply crunching a decrypted block whether we've succeeded or not.  We may have to.
+Even with LyAv, these are still expensive computation
+
+No, I mean that while the effect of any additional computation will be linear across all keys,  repeating a large amount of added computation up to 97 quadrillion times would have a significant
+impact on the cost of a brute-force attack against the algorithm, were not because LyAv provides us 
+with a near-infinite computation time which allows us to perform those 97 quadrillion rounds in just 
+DENIED minutes
+
+The moment they ascertained AES512 and AES1024 encryption was effectively broken by her team, the entire 
+team was terminated. We all know here the strange things of life come in from the future
+
+... we always thought she was killed because she, or someone in her group, tweaked the blokchains 
+in the bitcoin ledger, something that would expose to the world the blockchain technology is not 
+secure nor safe, something they were not going to shout it from the rooftops if this is true. They wish the world to believe in privacy and data security, though we all know that's just a child's transitional object..
+
+Once you've broken AES and SHA-256, the last thing you'd do would be telling anyone. Keeping data 
+safe and secure is central for our world; being able to break the algorithms is even more vital, but the 
+real thing is never to tell anyone you can do it. DENIED last assignment was to enhance DENIED chips, 
+the ones we place in all the F-16's we sell to Turkey, and the new ones we will attach to the F-35's we 
+are going to sell to the Emirates. Yeah, we sell advance weapons to our 'allies', weapons that will be silenced 
+and rendered inoperative if required... That was DENIED last assignment
+
+The beauty of what she did was, essentially, that while the other teams were crunching numbers 
+of the order of 32 trillion encryption operations, or easily tampering with the blockchain ledger, or 
+decrypting highly sensitive data, all of it using LyAv, she and her team took another approach: to apply 
+linguistic rules to the AES256 and AES512 messages, as if those messages were actually representing 
+an ancient language you have to decypher... and they succeeded. Without using LyAv or any other of 
+our supercomputers
+
+The trapped version of OBM will predict, for the current state of the aircraft, the response that will 
+result from various control surface deflections. This is its normal operation. But the moment our allies 
+try to use the F-35 against our assets, a signal sent from DENIED or any PSV around will trigger 
+the trapped mode. Under this mode, when the pilot gives certain commands, the OBM  computes in real-time the required parameters that causes the control surface deflections  to render the aircraft fully inoperative, resulting in a fatal crash of the airctaft. That's what project  DENIED is all about
+
+AES, SSL, TLS... you name it, are all transparent for us. And to tell you the truth, they were all broken 
+shortly after their implementation. But there is one thing you do not understand: we break encryption algorithms 
+because we are in an urgent need to find one we can rely on to encrypt our highly sensitive data, and not 
+because we want to know what others' encrypted data is all about. Look, what we wish to protect, to encrypt, 
+and to hide is a small amount of data, but that's data that can change the universe we live on, you know. Actually, 
+that data do not even belong to us, we don't understand it, we don't know how to use it. 
+That's data we found and that our DENIED friends commissioned us to protect
+
+See, the Distributed Aperture System (DAS) provides the the pilot with an IR sphere around 
+the airplane to do missile warning, guide, navigation, and control functions, night vision and so on. 
+A tweaked-by-design DAS compromises those essential capabilities there where you want them to be 
+compromised. This is done by having a PSV flying such that the targeted aircraft lies inside its 
+search cone, and then sending the trigger signal. A single PSV can effectively down each and all F-35's 
+in seconds, provided they are all fitted with a tampered DAS. You know, all the high profile weapons
+we export are fitted with compromised systems and subsystems, in case we need to silence them
+
+Yes, SV17q has high level access to both security technologies and to the companies that sell and operate them. 
+Not because they are interested in our mundane business or stupid state and financial secrets. They don't give a damn 
+about that, they don't care, you know. They only care about securing and protecting DENIED files which 
+contain the entire CAFB exchange records. I ignore what those files are or what information they contain. 
+I only know it has something to do with an incident back in 1976 in or around Clovis Air Force Base. That was the name of that AFB by then

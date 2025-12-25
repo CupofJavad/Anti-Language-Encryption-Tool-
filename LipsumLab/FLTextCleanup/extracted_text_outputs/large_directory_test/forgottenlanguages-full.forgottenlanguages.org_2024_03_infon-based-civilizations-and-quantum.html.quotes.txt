@@ -1,0 +1,25 @@
+To discover a new particle, physicists must isolate a subspace of their high-dimensional data in which the hypothesis of a new particle or force gives a significantly different prediction than the null hypothesis, allowing for an effective statistical test. For this reason, the critical element of the search for new particles and forces in high-energy physics is the computation of the relative likelihood, the ratio of the sample likelihood functions in the two considered hypotheses, shown by Neyman and Pearson to be the optimal discriminating quantity. Often this relative likelihood function cannot be expressed analytically, so simulated collision data generated with Monte Carlo methods are used as a basis for approximation of the likelihood function
+
+only the soul
+
+Communication is possible only when common knowledge is available. When several or many agents cooperate to solve a problem that cannot be solved by any single one, it is essential for them to have models of other agents and to communicate with one another
+
+information can be divided into distinct units called state-of-affairs (SOAs), also referred as infons. These units have the purpose of describing diverse situations (parts of the world that serve as context). It is assumed that infons are partially ordered by information subsumption operator. A situation is described by various relations that hold among different objects. The objects (in the world) are considered as invariants that have properties and stand in relations
+
+Infons are statements viewed as containers of information (rather then representations of truth values)
+
+There are 10
+43
+chronons in one second of reality. Another way to visualize 10
+43
+is to compare it to some astronomical or scientific phenomenon. For example, the estimated number of stars in the observable universe is thought to be around 10
+24
+. So 10
+43
+is a number that is unimaginably larger than the number of stars in the entire observable universe, and yet, this is the number of chronons you need to manipulate to just change one second of reality
+
+One can legitimately ask the question: in what way can quantum computing allow new perspectives for the development of future beings? In the collider we find particles interacting, but we also find something that, for the lack of a proper term, we call quantum beings. Or perhaps they are just beings that pass as particles thanks to a sort of quantum biomimetism..
+
+The quantum biomimetic protocol encodes tailored quantum behaviors belonging to living systems, namely, self-replication, mutation, interaction between individuals, and death, into the cloud quantum computer. Our experiments make us conclude that the spatiotemporal universe is perhaps not the best place to look for finding life and culture within our reality. Life and culture might indeed more abundantly be found not so much by exploring our universe in width, that is, its spatial vastness, but in depth, namely, exploring those regions that, from our spatiotemporal perspective, appear to be non-spatial and non-temporal, and in that sense more conceptual than objectual
+
+Studies on the relation between cognitive processes and time experience suggest that apparent duration increases with the transmission rate of information. Experiments indicate that there is some support for the proposition that estimated time lengthens with the sequence speed of stimuli presented during a given period

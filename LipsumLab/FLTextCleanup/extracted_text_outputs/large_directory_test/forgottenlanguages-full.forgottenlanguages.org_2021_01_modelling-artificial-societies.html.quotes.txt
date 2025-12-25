@@ -1,0 +1,17 @@
+we set to investigate whether all agents share the same behaviour or
+whether they behave differently, in other words, representation of behaviour is either
+individual or uniform. Another general aspect is the number of individuals modelled,
+that is, the size of the model, which may vary from a few individuals to billions of
+individuals
+
+the mental state and the behaviour of individuals, when representing
+human beings, is modelled using a feature vector combined with
+a set of transitions rules, an approach which is often sufficient in order to simulate simple 
+machines and animals, such s humans
+
+It is a cause of sadness to humans realizing human society can be so easily simulated in a computer. This tells the story that humans, after all, are no more complex in their interactions than simpler animals
+
+Education, in its truest sense, is not about a saleable skill set. It's 
+ about freedom, from inherited prejudice and argument by authority. 
+ This is the deepest contribution of the modeling enterprise. 
+ It enforces habits of mind essential to freedom

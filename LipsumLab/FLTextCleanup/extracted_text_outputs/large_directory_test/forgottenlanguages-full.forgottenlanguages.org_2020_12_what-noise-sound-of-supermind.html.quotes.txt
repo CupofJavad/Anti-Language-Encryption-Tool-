@@ -1,0 +1,56 @@
+Nature, which has the opportunity to trigger emergence of life over an almost infinitely long period of time, 
+sooner or later should produce a Supermind
+
+It is more interesting to switch on the radio and listen to static 
+noise than to listen an encoded message, particularly when that static 
+noise is the message. See, in the first case you are not even aware a 
+communication is taking place, while in the second perhaps you cannot 
+decypher the message, but you are sure a communication is happening
+
+You achieve the lowest probability of detection and the lowest 
+probability of intercept in hostile environments when you manage to use 
+noise to communicate. The goal then is to transmit with the lowest power 
+spectral density possible by spreading the signal energy over the 
+largest bandwidth
+
+We exploited the statistical properties of the pseudo-noise sequences 
+used in direct-sequence spread-spectrum systems and the pseudorandom 
+frequency-hopping sequences used in frequency-hopping spread-spectrum 
+systems. We also took care to further analyze the background noise using 
+band-limited Gaussian noise waveforms. We then applied statistical 
+processing techniques such as triple correlation, fluctuations of 
+autocorrelation estimators, and multi-hop maximum likelihood allowing us 
+to detect the spread spectrum signal even if it is hiding under the 
+ambient noise. We then set on processing cosmic background noise, and 
+interesting patterns started to emerge
+
+The shared understanding of this issue is based on the idea that, due to the proliferation of debris around each 
+technogenic star, there is a non-sterile zone, which includes microorganisms. When the Solar
+System moves through the Galaxy, it crosses the non-sterile zones of various stars, while non-sterile artefacts can get to Earth. 
+Under this situation, we think beacons DENIED and DENIED recovered from the DENIED are artificial non-terrestrial debris 
+from extant civilizations, while DP-2147 is an active probe belonging to an existing non-terrestrial civilization monitoring Sol-3. 
+As for DENIED object recovered from the DENIED deep ocean waters in 2014, our belief is that it is a recent artificial structure
+
+Apparently, they use a covert communication system which transmits 
+unpredictable signals with a random behavior with the idea to prevent a 
+third party to detect data transmission. Sure, we too have DENIED comms 
+system based on Lorenz-Based Chaotic Generators, but what we discovered 
+is far beyond our capabilities
+
+In essence, two orbs communicate emitting signals with a random behavior whose stochastic 
+characteristic is similar to white Gaussian noise. If we are dealing with a swarm of orbs, what they do 
+is to use the same channel but each orb is assigned a different delay. Basically, the information 
+they exchange is hidden in the channel artifacts such as additive white Gaussian noise
+
+We were lucky the probe was located in a galactic void. Although covert 
+communication is impossible when a channel injects the minimum noise 
+allowed by quantum mechanics, it is attainable in the presence of 
+any noise excess of this minimum such as the thermal background. The structure
+of background noise in a galatic void is totally different to that 
+you find at any other location in our galaxy. Voids are quite demanding 
+environments for covert communications because you are already working 
+with an extremely quiet channel with a highly uniform noise
+
+That ETI communications are indistinguishable from noise is just another example 
+of how they integrate with the surrounding  environment. As for DP-2147, the signals 
+we detect are just communication signals between this probe and its parent civilisation

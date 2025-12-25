@@ -1,0 +1,17 @@
+if the laws of Relativity allow us to revisit the past, then it never really passed, and a time that fails to pass is no time at all. The Queltron Machine proves what we alreay knew, that you cannot teleport matter, but you can teleport information
+
+Is it possible to send an object or even just information backwards through time, without bringing temporal paradoxes with it? It all looks as if the Universe were a computer in which 'the present' is the runtime, data is read from 'the past', and results are generated in 'the future'
+
+
+There have been several experiments where photons appear to travel faster than the 
+speed of light, and hence backwards through time. However, the real 
+test is whether any information can move backwards through time, and so far only once we 
+had success in demonstrating causality violations, and it wasn't fun at all
+
+You need to understand that quantum teleportation is not the same as the common term 'teleportation' because no 
+matter is transported at all, just information. It is also known as entanglement-assisted 
+teleportation because as well as using a conventional communication channel, it uses 
+entanglement to transmit quantum information non-locally. However, because classical 
+information cannot be transmitted instantaneously, quantum teleportation cannot be 
+used for communication at superluminal speeds, so teleportation alone is not a valid 
+form of time travel

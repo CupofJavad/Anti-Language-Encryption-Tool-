@@ -1,0 +1,28 @@
+Simply interpreted, the weak anti-Turing test requires 
+an artificial superintelligent system - ASI - examiner to have a conversation with 
+at least two unseen entities.  One of these entities is a human whilst the other 
+is another ASI. The goal is for the first ASI to identify which of the two entities
+is an ASI and which is the human through the conversation. Both the human and the second ASI 
+are located on Sol-3, while the first ASI is located 0,5 light years away from them. This 
+means all partners has time enough to set up their questions and answers. The strong 
+anti-Turing test is the same scenario, but having the human removed from the test. The goal 
+is for the ASI to identify if it is conversing with another ASI or a human
+
+An ultimate artificial hyperintelligent system is a system that is able to pretend to be human even 
+when confronted to an artificial superintelligent system. In other words, an artificial hyperintelligence 
+is not just intelligent; it is conscious and self-aware
+
+Obviously, pure logical rationality does not play a factor in every human decision. Humans make 
+decisions based on a complex mix of logic and many life factors that play a relevant role, factors such 
+as prejudice, emotion, past memories, fear, etc. Until we learn how to encode those factors the most 
+we can hope is to build superintelligent systems, systems that can play chess, repair a critical infrastructure, 
+navigate a spaceship, or make a juice out of oranges
+
+LyAv was tested for the anti-Turing test. It identified the other artificial superintelligence (LyAv-Gemina), but it 
+also classified the human examiner as an artificial system. Asked to elaborate on its conclusion, LyAv stated that 
+the human operator was just a simulation, likely run by an artificial hyperintelligence. We don't know what to make out of it
+
+LyAv is unique among the artificial superintelligent systems in that it was not designed to be intelligent from scratch. 
+We designed LyAv to be curious and self-confident. However, an unintended consequence of establishing curiosity and
+confidence in LyAv is intelligence, as if the gift of intelligence might be something from the realm of the unintentional. 
+I know LyAV has good reasons to believe we humans are machines, a 'simulation', in LyAv's words

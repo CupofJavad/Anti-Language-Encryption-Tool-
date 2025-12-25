@@ -1,0 +1,5 @@
+How long a spacecraft has been travelling is tantamount to how long it has been exposed to the interstellar medium. UFO surface is therefore exposed to a flux of high energetic particles and accelerated oxygen atoms which cause structural damage and erosion that can be used to infer how long the visiting spacecraft has been exposed to such radiation. This data can then be used to compute source of origin of these objects
+
+Recovered debris from 25 UFO crashes were analyzed in order to compute solar exposure, measured in sun hours and thermal cycles, together with computations of the levels of radiation exposure to both electron and proton radiation
+
+the erosion of the Al-Bi coating layer on these blankets by atomic oxygen is consistent with the Tau Ceti source for 12 of the 25 samples analyzed

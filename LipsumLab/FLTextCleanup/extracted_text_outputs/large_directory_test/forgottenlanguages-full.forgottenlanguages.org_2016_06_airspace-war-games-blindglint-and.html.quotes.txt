@@ -1,0 +1,5 @@
+Deleting all ADS-B messages sent by a particular aircraft would lead the aircraft to disappear completely from an ADS-B-based ATC application
+
+It is possible to inject fake ADS-B messages claiming nonexisting aircraft (so-called ghosts) onto the 1090MHz channel. Any legitimate ADS-B receiver would consider these fake messages as indistinguishable from real aircraft, leading to serious confusion for both pilots and air traffic control, particularly under poor signal and visibility conditions, when reliance on instruments is highest
+
+During a virtual trajectory modification/false alarm attack one aims at modifying the position and trajectory broadcast by a real aircraft. This can be achieved by both selectively jamming the actual messages at the ground sensor and replacing them with new ones, modified by the attacker. Alternatively, ADS-B messages can be modified directly on the air

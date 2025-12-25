@@ -1,0 +1,5 @@
+My job was to fill in the cards we attach to the containers in which the PWs were kept. You were required to fill in the serial number of the tag, the nationality of the capture unit, the capturing unit ID, the date, and the location of capture
+
+Obviously, the capturing unit procedure to handle these erm... yes, entities, or PWs, as we called them, differs from standard procedures. Our task was to obtain as much preliminary information as possible from the PWs before handling them to SV17q for what they call 'interrogator exploitation'. We focused on who, what, when, how, and why, but obviously these are not normal prisoners, so we never got an answer from them
+
+How they do it? Oh well, they tell you the tactical questioning unit is being dismantled, they reassign you to another unit, they send you and your peers to Afghanistan and, you see, next day the entire team finds itself inside a copter which crashes and no one survives. That's how they do it

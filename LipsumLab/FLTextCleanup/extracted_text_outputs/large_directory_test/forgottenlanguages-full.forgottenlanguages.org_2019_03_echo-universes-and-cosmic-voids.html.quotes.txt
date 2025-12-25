@@ -1,0 +1,14 @@
+There are three possible scenarios here. Either the Universe is a computer itself, therefore 
+located externally to the system it is controlling (a); or the Universe is a system which contains 
+computers internally (b); or the Universe is just the result of a simulation being run by a computer 
+located externally to it (c). The question we face is whether we can find a way to discover which 
+of these three scenarios does best fit our current observations
+
+The operation of a massive quantum computer to be able to manipulate realistic quantum systems (i.e., Universes)
+faces the acute problem of the computer being unavoidably subject to an interaction with the
+environment it is controlling. Specifically, this interaction causes decoherence, which in turn 
+makes the quantum computer to behave unpredictably. It seems a logical option to place such computers 
+at the center of cosmic voids to minimize interaction with the environment, but even in that case you 
+are to expect some interaction, which means  those computers could be hackable by another hypercivilization. 
+Obviously, the best arrangement would be to have the quantum computer outside the Universe itself, which leads 
+us back to the old problem of controlling a system without being part of that system

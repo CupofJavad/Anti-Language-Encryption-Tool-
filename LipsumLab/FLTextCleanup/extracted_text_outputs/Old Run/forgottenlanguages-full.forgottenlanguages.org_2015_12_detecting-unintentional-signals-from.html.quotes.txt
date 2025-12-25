@@ -1,0 +1,3 @@
+Due to limitations of radio communication technologies over interstellar distances and limited sensitivity of our radio receivers, signals emanating from an alien civilisation could only be detected within a certain radius around the alien radio transmitter
+
+The probability of detecting signals from alien civilisations is equal to the probability of detecting a signal from at least one alien civilisation. And this probability is our goal. We can detect signals from any number of civilisations, but signals from just one civilisation will also “do the trick” quite nicely

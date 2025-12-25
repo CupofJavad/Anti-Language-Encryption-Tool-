@@ -1,0 +1,1 @@
+It now seems that natural languages, at least some of them, are not  context free. However, all known languages seem to be languages for  which the parsing problem is decidable deterministically in polynomial  time, including the so-called weakly context sensitive languages

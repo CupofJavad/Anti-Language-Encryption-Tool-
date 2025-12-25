@@ -1,0 +1,3 @@
+whoever built them, signal propagation times must play at least an equally important role, and they might thus well reach the same scalability limitations at some point as those we find using classical deep-space probes
+
+Each probe contains an instance of a stochastic reactor. All probes are linked together forming a large distributed reactor, which is also robust against individual probe failures, given the entire system is well enough interconnected and has enough resources available

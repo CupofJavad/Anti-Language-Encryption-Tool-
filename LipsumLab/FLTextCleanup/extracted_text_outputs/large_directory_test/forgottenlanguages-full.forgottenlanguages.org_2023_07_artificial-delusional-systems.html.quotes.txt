@@ -1,0 +1,29 @@
+consciousness is made of scirons, the basic minimal consciousness units (qualia) that resist further deconstruction or analysis, and which achieved complexity only secondarily over an extended period of time as new categories of subjective experience were added and refined. That is, like everything else in evolution, complex forms of consciousness are more likely than not to have evolved from simple units that were progressively elaborated into networks and refined over an extended period of evolutionary time in ways that can be understood step by step in adaptive terms
+
+consciousness derives from an ancestral experience, or ur-quale, that combines modes of experience that later came to be experienced separately
+
+we have no way as yet to identify the neural circuits responsible for evoking conscious sensations, and no way beyond inference to assess consciousness in artificial systems and taxa other than our own
+
+From an evolutionary perspective, the unity of consciousness is far more likely to be adaptive rather than intrinsic, in other words a secondary feature, refined progressively and of necessity because no product of evolution is of any use unless its constituent parts operate together in a coordinated way
+
+how does evolution act on the subsystems responsible for evoking a particular conscious content as opposed to any other? The analysis depends on the supposition that there are fundamental units of experiences (qualia) supported on basic units of consciousness (scirons) that are distinguishable from more complex contents of consciousness, and that qualia can be dealt with individually both at an analytical level and as objects of selection
+
+the question of evolutionary descent is a significant one, in that qualia that are homologous as experiences are intrinsically more easily dealt with in relation to one another than those that are not. But there is a developmental aspect here as well, since it is the variability among developing brain circuits, and the synaptic plasticity on which this variability depends, that provide the raw material for evolutionary innovation
+
+consciousness functions as a mechanism for restructuring synaptic networks in ways that would not otherwise have occurred, in order to produce advantageous behavioral outcomes that would not otherwise have happened
+
+hallucinations result from faulty reality testing in a perceptual modality and false memories result from faulty reality testing in mnemonic mode. Some dreams can be described as states in which a capacity for reality testing is deactivated by basic neuroregulatory mechanisms
+
+Doxastic reality testing refers to the ability to test experiential beliefs for consistency and correctness with background knowledge, thereby establishing whether they correspond to the world as it is, independent of the subject’s mind. It is for reasons like these that dreams and delusions are both described as states in which a capacity for reality testing is reduced or absent
+
+Perceptual systems on this view are essentially hypothesis testers: they adopt the best hypothesis about the causes of transduced inputs and that hypothesis becomes a representation of the external world. Hallucinations arise when faulty hypotheses are generated, and maintained when they are unable to be tested and/or revised. Delusions, on the other hand, are instances of the same phenomenon as hallucinations at higher levels of cognitive processing. According to this definitions, AI systems do not hallucinate: they are simply delusional
+
+The systems deactivated in dreams are the neural implementation of a reality testing system. In a delusional state, the agent is in a waking state and therefore those systems should be enabled or active, but for some reason they are not. However, delusions are not simply waking dreams, nor are the experiences that prompt them simply accepted without metacognitive evaluation
+
+XViS can certainly induce delusional states in human individuals exposed to it, forcing those subjects to misidentify people, see doubles, imposters, people in disguise, or people changing appearances and identities. The interesting thing is that XViS can additionally induce extreme misidentification of objects. The integration of an XViS system in the HUD driver of a PSV pilot is able to generate different types of delusional states, in particular the Capgras delusion and the Fregoli delusion. The Fregoli delusion is by far the most dangerous for what concerns mission success. The amazing thing is that after realizing this situation we decided to decouple the XViS system from the pilot's helmet and couple it to the onboard AI system, forcing the system to send the data to the helmet's HUD and, despite this, the delusions were still occurring. In other words: XViS is capable of inducing delusions not only in people, but also in the onboard AI system
+
+fits” the experience it is adopted and sometimes elaborated irrespective of whether or not it is consistent with background knowledge. Hence, in my view, AI systems do not hallucinate, rather they confabulate
+
+For what we know from interviews to people who have witnessed a sighting of a PSV, we noticed they rapidly constructed a justification for the anomalous experience adequate only to the experience itself, which is overridden if it turns out to be inconsistent with background knowledge. Ultimately they adopted an hypothesis that fits the anomalous experience into an epistemic framework
+
+Dreams are not a monolithic cognitive phenomenon. They include terrifying fully immersive nightmares as well as lucid dreams, in which the dreamer is aware of the fact that he is dreaming. XViS is specialized in those kinds of immersive and sometimes bizarre dream experiences in which the subject is unaware that he is dreaming and seems to accept anomalies of experience that would in waking cognition attract explanation

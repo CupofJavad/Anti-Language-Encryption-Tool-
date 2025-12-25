@@ -1,0 +1,3 @@
+LyAV is able to learn semantics from corpus data by concurrently executing several algorithms. One way this is achieved is based on the central idea of limiting the number of denotations under consideration and define a probabilistic generative model for interpretations
+
+One node in LyAV is tasked with determining whether one natural language sentence (the “text”) entails another (the “hypothesis”) and thus generalizes some important natural language problems, including question answering, summarisation and information extraction

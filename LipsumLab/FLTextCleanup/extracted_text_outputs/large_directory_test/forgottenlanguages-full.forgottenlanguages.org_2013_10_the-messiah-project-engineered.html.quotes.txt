@@ -1,0 +1,3 @@
+Specifically, controlled drug delivery systems have been developed by altering the diffusive characteristics of hydrogels. Such systems are able to maintain a desired blood concentration of a specific drug for a prolonged period of time and have been constructed as either matrix or reservoir configurations. In a reservoir system, the agent is stored in a central core surrounded by a polymer membrane. Conversely, in a matrix system, the agent is uniformly distributed throughout the material and slowly released from it
+
+Gold nanoparticles have been incorporated into the active centers of large enzymes such as glucose oxidase allowing for electron conduction an order of magnitude higher than what is seen without the nanoparticle

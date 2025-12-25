@@ -1,0 +1,82 @@
+The way we do it is translating the text into Honi. For example, here is the message in Honi:
+び いんげあいあ なおえ 
+え ておい いん ほえ  えあ  い 
+あえあ い ぼねあ せ ほえはえ 
+い えおいんい おえ れんぴあ 
+いさえお あみあえ えお どえあ
+んぱ えおにんげあん おん えああい 
+ああえ いあ いえぺあ えおお えあえおいえああえ 
+ え い おえびいんたい おいん をえぼえ 
+いあ いんごえあ  じょいん あえん 
+えあ おん えあのえおん 
+げあ  えおあ ひあ いん  えあ 
+おえ ひいあいんぎあ じゃえ まいあえあえおいん
+Pasting the message into Google Translate will give you the following translation:
+Beautiful eyebrows
+Well, boy.
+Aaaaaaaaaaaaae
+Parenting
+I do not mind eating Aimeae
+Happy birthday party
+Oh my gosh, eeeeeeeeeeeeeeeeeeeeeee
+Pay attention to the european
+Oh my God Ajen
+Ee Oee no Oe
+Blowjobs Hello
+Do not forget to tell me your name is Hiiaiaiaiaaaaaaaaaaaaa
+The NodeSpaces algorithm #04556 for July 15th, 2017 processes the output to give you the original message:
+DO NOT FORGET TO TELL AJEN
+
+
+For Xié, Red Xié, and Purple Lisu languages the idea is different. A text encoded in Red Xié, such as:
+娃鰄些嘛 南雨窪曽 賠汚曽鵯是
+鵯徠 亜黼賠汚 亜賠汚 米袙
+世腕俄 姙 徠鼾俄 蟇他齟。
+馬頴麸齟徠 廚黹 黹鵯徠籔
+儡雨麸麸齒 亜袙和闍 米袙 姙 徠鼾俄。
+米袙 袙鼾俄 鴕世 袮曽是麸 娃鰄些他
+具怜鷸 亜 廚腕俄 亜徠鴕 他雨齟 闍世座。
+would be rendered as:
+Some of the things are made
+by the United States
+and the United States,
+the United States, the United States,
+the United States, the United States, the United States, the United States,
+the United States, the United States,
+the United States and the United States,
+The horses are now in the middle of the world.
+It is a man who is a man of the sea.
+He is a man of the sea.
+The NodeSpaces algorithm decodes the message using 0's and 1's, which correspond to either a horizontal or a vertical stroke in each of the sinograms. If we ask Google Translate to perform a reverse translation, we get:
+有些事情是由美国和美国，美国，美国，美国，美国，美国，美国，美国，美国，美国 和美国，
+马现在在世界中间。 这是一个海人的男人。 他是海人。
+and it is on that result that you need to apply the NodeSpaces decoding algorithm in order to recover the original message
+
+Different algorithms, and different input languages, are used to encode specific messages. The same example for Dagani yields:
+פ כתבי דינגעאיאל כנאוע טדי
+ערד רטעויף ינג תועגכת יס עאה פבל י
+אעלדא יג בונעא סעמבס תועפהאע
+ דויבד עוינגפפי ועויט הרענפיאפד
+ך יטמסאעוי אכמיאע עוכפמר דועאב
+דה נפא עורהנינגעאפנף ומסן עאאיול 
+אאע ךיאף יעפעאה פעוו עאכעויעאאע ך
+ב ס פעג סי ועמביינגטאוית וינגמף ועבוע
+יא פיינגועא לפר דכוינגך אעמפן ף
+עאגדב וגניג עאפכדנועווןם 
+ך וגעא ם עוא התיא ינגפדב  עא
+ועי בתיכליאינגיא כאע סמאיאעאעוינגט
+F. Dingaiel's writings as Kanaoua Teddie
+Arad Rathoyfang The Assassination of Issa Pavel
+Al-Da'ida b
+Dovid Oingupi and Oit Hananfyapad
+It was a great day
+De Naffa Urhenning Afifan and Masan Aiul
+I want to see you
+In the Sea of Wyoming, Wingem and Owb
+Yea Feingua Leper Deutching Amphon
+Ajdab and Ghanig Afadkunawanam
+Wa'eef Awad al-Thi Yingfidb a
+Winnie the Thingyayinge
+in which the original message is obvious
+
+You simply write your message, translate it into Dagani or the language of your preference, and send it to the destination attaching the identification of the NodeSpaces algorithm (in our example this would be #04556 for July 15th, 2017); the receiver then simply pastes the received message into Google Translate and processes the output using the specified algorithm to retrive the original message

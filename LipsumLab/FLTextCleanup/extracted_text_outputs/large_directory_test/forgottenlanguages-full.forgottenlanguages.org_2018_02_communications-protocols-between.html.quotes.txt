@@ -1,0 +1,11 @@
+Clearly, the physical limit for the precision of the encoding and decoding information process is given by Thermodynamics. The lower bound on the uncertainty about the estimation of a given parameter is zero only in the thermodynamic limit of reversible processes, as required by the the second law
+
+this process requires an exceptional degree of preparation, control, and measurement of coupled nuclear spin systems; the idea is to prepare runs that we know will have a specific action on the parallel world, and then wait for them to do the same, as a way to acknowledge reception of our information and hence be able to establish a reliable communication channel between ours and their world
+
+within a particle collider two beams of particles are projected at near light speed one against the other; during the collision particles decay into subparticles, which decay in turn into other particles till they escape the detector. The question is that we also detect extremely short-lived tracks that shouldn't be there. After deep analysis of these ghostlike tracks, we came to the conclusion that they were... intentional
+
+Queltron Machine comprises superheated detectors which provide a unique approach to direct detection of whatever particles our neighbors of the parallel world send to us. This technology has an excellent rejection of gamma and beta events, and shows an excellent alpha rejection using the acoustic emission of bubble formation. We also have the ability to employ different targets so, basically, the Queltron Machine is our best tool to explore parallel worlds
+
+In simple words, the sensitivity of the Queltron machine to dark matter interactions depends on the energy threshold and effciency for bubble nucleation from recoiling nuclei, with the majority of spin independent sensitivity coming from iodine and the spin dependent sensitivity coming from a combination of fluorine and iodine. Pressure and temperature of the active fluid determine the conditions for radiation-induced bubble nucleation
+
+We want them to keep looking at the wrong direction, so that we can continue with our long-term program and getting to know better our neighbors, that's why we fund those SETI searches though we already know where to find our visitors and how to communicate with them

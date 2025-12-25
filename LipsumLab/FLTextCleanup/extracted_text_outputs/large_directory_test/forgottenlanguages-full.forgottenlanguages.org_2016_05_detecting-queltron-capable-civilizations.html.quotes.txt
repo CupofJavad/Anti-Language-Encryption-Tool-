@@ -1,0 +1,5 @@
+if one could show that quantum field theory forbids violations of averaged weak energy condition, one could rule out advanced civilizations maintaining traversible wormholes
+
+In the Queltron machine, the Cauchy horizon is fully stable and thus constitutes a counterexample to the conjecture of strong cosmic censorship
+
+we are far away from knowing how to build a Queltron machine, but our main interest right now is not to build one, but to learn how to disrupt it in order to avoid unsolicited visitors from using it. We need to find ways to avoid the energy-stress tensor from violating the averaged weak energy condition or, at least, to restore it the very moment we detect a wormhole is about to appear in our vicinity

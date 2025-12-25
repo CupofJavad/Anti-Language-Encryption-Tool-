@@ -1,0 +1,3 @@
+Since the first detection of these probes in the Deneb system we have monitored closely these objects. We know each probe acts as a node within a bigger system and we know the sensor network starts to increase from a few nodes up to a fixed number of nodes. We also know this process takes place via a protected channel, and we know they interrogate other objects using an unknown friend-or-foe identification mechanism
+
+We lack a probe interrogation protocol so far. The identification procedure Denebian probes use is a complex one and we are just outsiders who loose the game of guessing passwords, who process their signals too slow, and that made a fatal mistake when we first encountered a Denebian probe

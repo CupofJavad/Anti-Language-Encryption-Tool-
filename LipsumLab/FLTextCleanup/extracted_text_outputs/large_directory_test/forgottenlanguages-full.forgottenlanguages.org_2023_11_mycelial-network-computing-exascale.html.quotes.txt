@@ -1,0 +1,21 @@
+Each computer paradigm is as limited as the assumptions and principles upon which it is built
+
+While it is true that the computing paradigm can indirectly influence the number of times data is retrieved from RAM, it is not the sole determinant. Multiple factors, including algorithm design, data access patterns, memory management, and hardware architecture, collectively determine the frequency of accessing data from RAM
+
+This new paradigm makes use of biological molecules, such as DNA and enzymes, instead of traditional silicon-based technology for performing computational tasks which allows a massive parallel processing capability. On the other hand, beyond the traditional binary computing, molecular computing can work with multiple states simultaneously, allowing for more complex and faster computations
+
+One area of research involves using biofilms to construct bio-computers or bio-memristors. Biofilm-based memristors can potentially provide new ways of storing and processing information, as they can respond to stimuli and adapt to their environment, and they are key in our research on defense swarm robotics and sensor networks
+
+However, the design and manipulation of DNA sequences and biomolecules involve creating patterns for computations rather than writing code in the traditional sense. The algorithms and techniques used in classical computing have inherent limitations in terms of solving certain types of problems efficiently. Some problems may not have known efficient algorithms, leading to limitations on the speed or feasibility of solving them
+
+We clearly need not a tool to make computations (a computer), but a life form being able to do the computations we ask it to do for us
+
+We chose the fungi because they are one of the largest, the oldest, most adaptive and widely distributed group of organisms, and because the are smallest fungi are single cells. On the other hand, the largest mycelium spreads in hectares, and when growing in a bulk medium of wood or plant shavings fungi bind the medium in a solid monolith with outstanding mechanical properties. Furthermore, the mycelium bound composites are environmentally sustainable growing biomaterials
+
+Get this into your head: we don't need a computer that you use, we need you to be the computer that we use. Get it? Understand it once and for all: a computation can be embedded into living materials
+
+When it comes to parallel computing, todays technology is able to deliver not only many, but too many cores. But, unlike fungal biocomputers, their computing performance does not increase linearly with the number of cores. The computers we use today are totally inefficient for the tasks at hand. Actually, we all are using the classical computing paradigm that reflects the state of the art of computing 70 years ago. We desperately need a new computing paradigm, and a radical new design of computers. It is not a matter of increasing the computational power of current silicon-based computers because there comes a point when using more processors actually increases the execution time rather than reducing it
+
+Supercomputers are computing systems stretched to the limit, and there is a limit we cannot cross. Due to the classic computing principles, the first core must speak to all fellow cores, and this non-parallelizable fraction of the time increases with the number of the cores. The result is that the top supercomputers show an efficacy around only 1% when solving real-life tasks, so you can imagine how poor the performance is when dealing with alien tasks..
+
+We go into fungal computing because current supercomputers face critical efficiency and performance issues; current real-time systems experience serious predictability, latency and throughput issues; in summary, the computing performance has reached its technological bounds. Civilians may not experience it, even the military may not know it, but we need to change both the computational paradigm and the materials our computers are made of. That's the lesson we've learned after years of researching Tired Light II

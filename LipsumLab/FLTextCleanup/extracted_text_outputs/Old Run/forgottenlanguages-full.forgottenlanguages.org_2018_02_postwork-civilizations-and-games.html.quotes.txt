@@ -1,0 +1,19 @@
+One of the predictions of the Darwell Hypothesis is that advanced civilizations will be postwork civilizations, that is, civilizations in which all kind of sophisticated robots take over all forms of human employment, leaving the members of those civilization focused on games and ludic activities
+
+
+W-2
+civilizations would be metabiological in nature, solely devoted to any activity which is executed only for pleasure and without conscious purpose. Obviously, under this scenario every activity that brings pleasure is a game. We wanted to put under test the idea that Giselians were simply doing that, that is, playing games. Giraffe is based on a neural network that can learn how to play chess by simply analyzing thousands of games, more specifically, it taught itself to play chess by evaluating positions and with no pevious knowledge about the rules of chess, so we wonder if a more advanced system like NodeSpaces could draw the rules of the UFO game. We wanted to know whether the sightings could be considered just a game and, if so, what the rules of that game are
+
+We fed the system with frames taken from three footages of UFO activity: the Mount Isa Event, the one from Zhezkazgan, and the one from the Atacama desert encounter. These are 3 out of the only 6 events that we currently recognize as extraterrestrial in origin. We instructed the system to analyze the footages and to try to derive the 'rules of the game'. As a control set, we also fed the system with footage and mission profile data from the Mars Exploration Rover - A in order to find out what NodeSpaces figures out from it. As simple as that
+
+The experiments show that UFO activity does not follow a planetary exploration pattern but, rather, a game playing pattern. See, fed with descriptions and footage of various natural phenomena the system was able to correctly classify an electric storm, a tornado, a waterfall, and polar lights as just natural phenomena. Incidentally, Hessdalen lights were also classified as a natural phenomenon, while Atacama, Yulara, and Zhezkazgan footages were not
+
+
+The pseudo fictionality of events and encounters do not depend on a preference of the fiction over the rules of a game. But this poses the intriguing question of whether Giselians want their games to trigger the interpretation of some events as pseudo fictional events
+
+
+machine learning algorithms are leveraged to make sense of large datasets and to work out the most appropriate course of action for realizing some particular goal; what we have done is to fed the system with the course of actions performed by UFOs and get it to work out the particular goal of those UFOs. The main conclusion is that, except for just one case, the goals detected by the system do match the goals you would expect from a game. This is exactly Darwell's hypothesis: that Sol-3 is not a 'zoo' but a game board
+
+Complex and sophisticated games would help a lesser civilization to realize a distinct value:
+knowledge
+. Mentoring of a less developed civilization by an advanced civilization requires gaming. The pattern of behavior we observe in those objects when they fly by our nuclear facilities is not the pattern of a probe sounding and gathering data, it is the behavior of 'someone' playing games

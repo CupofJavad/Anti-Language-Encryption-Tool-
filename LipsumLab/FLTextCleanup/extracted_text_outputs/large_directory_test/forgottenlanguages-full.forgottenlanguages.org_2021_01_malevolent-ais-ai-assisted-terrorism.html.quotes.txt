@@ -1,0 +1,46 @@
+AI has multiple uses in a wide spectrum of fields. Counterterrorism is one of them, so it was a matter of time 
+for us to develop decision support systems based on AI that would allow us to better manage our emergency 
+prevention and remediation systems. DENIED is basically a command, control, and intelligence system designed to 
+assess risks derived from terrorist attacks. The recent security breach allowed the attackers to gain access to 
+DENIED source code, so it is trivial for them to re-engineer the code to come out with an AI system which does 
+exactly the opposite: to design optimum terrorist attack scenarios. So yes, we are watching the beginning of a new 
+era in which terrorist attacks will be designed with the assistance of poweful AI systems such as DENIED
+
+The model simulates the decision processes and interactions of complex
+government systems engaged in responding to and recovering from a particular
+terrorist incident in order to learn from them and maximize the design of future terrorist attacks.
+It explores scenarios by calculating the effects of a terrorist incident in terms of social impacts, 
+economic costs, and organizational effectiveness for the first 24 hours and for the first 30 days, 
+and it finally selects the scenario which maximizes the cost function from the point of view 
+of the terrorist group
+
+The system was set up to propose terrorist attacks that would simultaneously target banking and 
+financial systems, households, critical medical services and industries, federal government facilities, 
+telecommunications, and electric power systems, with the requirement to maximize both damage 
+to the selected targets, and the number of casualties expected, all of it within a given range of cost 
+incurred by the attackers
+
+DENIED analysis most of the time concludes that, for a given scenario, it may 
+become worthwhile to attack targets that it otherwise would not
+make sense to attack from the standpoint of prioritization or cost-benefit analysis.
+When the human designed attack diverges from that of DENIED, we often find DENIED's proposed 
+solution is more efficient in terms of damage inflicted
+
+It is not just a explode & forget action; see, after a terrorist bomb explodes mergency plans are activated as a first response
+to the immediate needs of the affected population. Numerous organizations, public and
+private, are involved, requiring immense efforts at coordination and cooperation. If the attackers proceed to jam 
+and interfere those efforts the damage increases. This evidently requires from the attackers coordination and cooperation, 
+which means modern day terrorism is a highly qualified task which effectively makes the Nunn-Lugar-Domenici Domestic 
+Preparedness Program useless
+
+We know some of the terrorit attacks were just proxy events in order to assess FEMA vulnerabilities, and to gain 
+a deep understanding on how materials and supplies are moved, the availability of personnel, and the effectiveness of
+the agency's actions. They also have a deep knowledge of the decision-making processes
+implemented by the Federal Reserve following catastrophic events. We also discovered they have accurate knowledge on 
+garbage trucks routes and timetables, and that they plan to use city buses and garbage trucks as bomb carriers
+
+Well, AI systems reach and exceed human level performance, hence the use of AI assisted terrorism was something 
+we were expecting to happen sooner or later
+
+Computational Propaganda
+Worldwide: Executive Summary

@@ -1,0 +1,8 @@
+Rationality
+of content has to do with the manipulation of declarative knowledge, whether in the form of symbols or other forms of planning. The content is that of the representations that are to be manipulated in a rational manner. The question of under what conditions such manipulation can result in rational behaviour remains an open question
+
+We
+are not interested in knowing what is the nature of knowledge or how is it related to representation. For us, the key question reduces to what is it a system has, when it has knowledge
+
+biological
+systems arise through evolution whereas artificial systems arise by design. For biological systems, this means that reproductive success, the animal's inclusive fitness, is the overriding goal for each individual. Whether this ultimate factor is explicitly represented in order to directly guide behavior or whether it acts only indirectly through a variety of proximate factors is a matter for experiment

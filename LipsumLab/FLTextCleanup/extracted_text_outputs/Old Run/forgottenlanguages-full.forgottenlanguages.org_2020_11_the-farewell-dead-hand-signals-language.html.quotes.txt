@@ -1,0 +1,57 @@
+These signals all have features that make us think they are beacons signalling the position 
+of a particular spot on Sol-3 surface; however, we now believe they are really dead hand 
+signal emitters, as to convey the message 'Sol-3 is still alive' - when detected -, or the opposite 
+message, that is, 'Sol-3 does not exist anymore' - when no detection
+
+There are several Internets out there. You really thought there is only one wolrd wide web? There 
+are several of them, three of which are run by DENIED, one of them used to process all the 
+dead hand signals in case the ETI Contact program is triggered; the other two have the goal 
+to implement the self-destruction strategy in case all of our defenses are considered neutralized 
+by the unsolicited visitors
+
+See,  there is always a nonzero probability of a false alarm launch response, even if there is 
+no crisis at all, even if contact proceeds as expected, and even if the post-contact requirements are 
+met. And this nonzero probability is inherent to the Sol-3 self-destruction algorithm, an algorithm 
+that can distinguish between a hostile global EMP event and a solar flare, but an algorithm designed to 
+make no concessions to ETI visitation: they come, the planet goes. Simple as life, light as air
+
+NC3 Farewell system is totally analogic; you can blow up the entire power grid, and the Farewell 
+will be alive and kicking. That's the strong point of analogic supercomputing, and that's why self-destruction 
+of Sol-3 is guaranteed in case unwanted ETI contact happens
+
+In a post-attack dawn, we know the probabilistic structure of the noise, we know the attacking 
+ETI will of necessity transmit positive entropy messages, and we know the technosphere is silenced, 
+thus we know what's next: no more dawns, neither for us, nor for them
+
+Consensual contact? Agreed contact with a non-terrestrial intelligence? No, that scenario is never 
+considered. To start with, agreed by whom? Who decides to initiate contact? Every planet must be left on its 
+own and planets' evolutionary course must be respected. If they want to destroy themselves, that is 
+up to them; if they wish to explore the Universe, that's their choice. But if they wish to contact 
+other intelligent beings the Great Filter is activated. Planets were set apart from each other 
+for good reasons. Does this mean you cannot explore and get to know other planet's civilizations? No, 
+it doesn't mean that. It means you have to learn how to study other civilizations without them being 
+aware, without contacting them at all. Non-invasively. It means you have to become invisible, silent
+
+In a typical seconds-out doomsday sequence, a PSV softly hover over a designated site in 
+the Grand Canyon, where the ambient noise is considered to be representative
+of very low level noise, possibly among the lowest in an open environment in air. 
+Simultaneously, a second PSV positions itself at a designated site in mid ocean with  
+ low shipping plus sea state 0, considered to be representative of the lowest noise in the
+open ocean; finally, a third PSV is stationed underwater at an under-ice designated location. 
+Those locations are collectively known as 'the Trinity'.  They process ambient noise for 
+60 seconds using advanced DSP. If given conditions are not satisfied, they start the termination sequence. 
+That's how the protocol goes
+
+This is likely the most mysterious signal of them all. It was discovered while implementing 
+data security protocols based on cosmic microwave background radiation power spectrum 
+as a random bit generator for symmetric and asymmetric-key cryptography. LyAv marked 
+a segment of the signal under analysis as an unknown anisotropy
+
+The initial approach is to have two paradigm-shift vehicles flying, say 'Presence' and 'Akrij', 
+and another two PSVs, say 'Graphium' and 'Tangent', patrolling the oceans depths. They gather 
+data on well-known anthropogenic sources of ambient and ocean noise. The character of ambient noise
+results both from the characteristics of the multitude of contributing sound sources and the 
+ability of sound to propagate efficiently from one location to another. In a post-attack scenario 
+we assume Sol-3's entire technosphere is silenced, hence the ambient noise changes radically leaving 
+behind only natural sources of noise. That's what allows PSVs to infer something fatal occured 
+that requires the initiation of the planet self-termination sequence

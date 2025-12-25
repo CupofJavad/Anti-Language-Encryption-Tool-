@@ -1,0 +1,11 @@
+Both
+objects are in DENIED field of view. They are at some 300 parsecs from each other. Both objects were found while performing a fine-tuning targeted sky search in the direction of DP-2147. The first object has an unusual infrared emission clearly indicating waste heat from a technological process
+
+There
+are no further assumptions. We are to respond based on what they think our response will be, therefore they expect us to send unmanned probes, to sense the object, to interrogate it in all bands, and to record the signals the object emits in response to our transmissions
+
+the
+deDoppler algorithm that serves as the backbone of many technosignature searches was conceived to perform searches of signals that would exhibit features that point towards an artificial origin, while the Involke-Lipschiff algorithm was designed to perform technosignature searches of non-terrestrial biologic origin
+
+DP-2147
+responded back with a signal of frequency 1.42341 GHz. The signal was clear and strong. It means the object is operating under the Schelling Point assumption, that is, it knows what frequencies we are most likely monitoring; and if it knows this, it knows a lot about our biology

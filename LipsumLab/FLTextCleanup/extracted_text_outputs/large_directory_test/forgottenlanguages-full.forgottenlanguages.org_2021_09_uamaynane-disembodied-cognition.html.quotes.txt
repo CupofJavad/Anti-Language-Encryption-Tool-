@@ -1,0 +1,5 @@
+it is a matter of perspective whether the brain computes, processes information, is a classical system, or is a connectionist system. Different perspectives serve different purposes, and different purposes are legitimate. Hence, all sides of the foundational debates can be retained if appropriately qualified
+
+The physical form of pancomputationalism is not directly relevant to theories of cognition because theories of cognition attempt to find out what distinguishes cognitionfrom other processes, not what it shares with everything else
+
+A common misunderstanding of Shannon information is that it is a semantic notion. This misunderstanding is promoted by the fact that Shannon liberally referred to messages as carriers of Shannon information. But Shannon’s notion of message is not the usual one. In the standard sense, a message has semantic content or meaning, there is something it stands for. By contrast, Shannon’s messages need not have semantic content at all: they need not stand for anything

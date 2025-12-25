@@ -1,0 +1,1 @@
+The new generation of DNA circuits incorporates educated leaks management modules. This drastically increases the number of possible reactions in the system, leading to a sizeable increase in the computational cost of analysis

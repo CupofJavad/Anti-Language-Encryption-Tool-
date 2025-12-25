@@ -1,0 +1,57 @@
+In our region of spacetime if probe
+q
+sends predicate message
+m
+to probe
+p
+, when
+p
+reads
+m
+,
+p
+knows that
+q
+knows
+m
+; within a Denebian cage
+p
+knows that
+q
+knows
+m
+even if the message never arrives
+
+However humans differ from a Denebian probe in one essential way: for a Denebian probe, if process
+p
+knows
+f
+, then
+p
+forever knows
+f
+: Denebian probes never forget, while humans do
+
+These principles strongly influence what can be known. Since knowledge is monotonic, once a process knows f it will continue to know f. Consequently, the knowledge of a process may be represented as a set, whose size increases with time, of K-monotonic formulae
+
+Communication is necessary for gaining knowledge; yet, not all messages cause knowledge to be increased. In extreme conditions, with limited energy supply, the purpose of message exchange is to transfer knowledge. Therefore it is natural that a process knows predicate message
+m
+before it may send
+m
+, that is:
+q
+may send predicate message
+m
+only if
+q
+knows
+m
+. There's no other way
+
+The very moment you observe a Denebian probe you become a process within the Denebian cage, and the replica world becomes indistinguishable for you from the real word. Behaviors include all events on the system, yet not all events are visible for
+p
+so that, with respect to
+p
+, two behaviors are equivalent at some point in time if the sequence of events (up to that time) visible to
+p
+in each behavior are identical

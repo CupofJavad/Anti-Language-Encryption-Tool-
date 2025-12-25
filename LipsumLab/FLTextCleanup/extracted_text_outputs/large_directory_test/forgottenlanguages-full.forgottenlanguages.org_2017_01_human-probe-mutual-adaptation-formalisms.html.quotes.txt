@@ -1,0 +1,5 @@
+We need to define a model for learning from probes action, a model that leads to our adaptation and to perform better than we currently do in performing the actions they are clearly expecting from us
+
+At this stage of the interaction it seems we can only learn if we adapt to the probes actions. So far our optimal policy has been one of chasing lights in the sky; maybe its time to go after a cooperative policy. So far we follow a best response strategy to the UFOs actions with the only hope to get knowledge on how they operate, and what their real capabilities are; this is also the strategy they follow the very moment we fly a new air plane, the very moment we deploy new subs, the very moment we launch new advanced satellites in orbit, but this is not the strategy to follow if we want to learn from them
+
+Evaluating Social Robots: Insights from the Diagnosis of Autism Spectrum Disorders

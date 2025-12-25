@@ -1,0 +1,5 @@
+It is still not clear whether emotional content impacts word processing on (pre-)lexical or semantic processing stages
+
+Event-related potentials have been frequently employed to examine the neural correlates of visual word processing because the method allows for a continuous analysis of ongoing cognitive processes from stimulus onset until the response with a fine grained temporal resolution in the range of milliseconds
+
+The processing advantage of emotional stimuli has been explained by their high intrinsic relevance to the organism that leads to binding of attention and processing resources (e.g., Lang, 1995). From an evolutionary perspective such mechanisms would allow for fast behavioural adaptation to biologically significant stimuli such as food or danger

@@ -1,0 +1,23 @@
+It is not whether or not we are conscious beings. It is why we are conscious. That's the issue
+
+In the communication setting the goal of two separated quantum computers, HAL1 and HAL2, is to compute a joint function f(s,t), where input s ∈ S is known by HAL1 and t ∈ T to HAL2. Assuming both computers are separated by 10
+60
+light years only a one-way communication protocol can be used. After receiving its input s, HAL1 sends a message m
+s
+to HAL2 which must then correctly output f(s,t)
+
+The communication cost of such a protocol is the length of the message m
+s
+for the worst case input s. The communication complexity of f is the minimum communication cost over all valid protocols
+
+If our Universe is the message being communicated by HAL1 to HAL2, it is obvious that any exact one-way quantum communication protocol must use messages of length log n
+
+If the message is sent at the speed of light, from the perspective of the photon, the age of the Universe is zero. Both time and distance is zero and, hence, the message arrives at the moment it is created
+
+As the Universe - the message - is expanding at a given velocity of 73.8 km/sec per Megaparsec of distance between any two points, this also means both HAL1 and HAL2 would be separating from each other at that speed. In order for the communication to be achieved, both HAL1 and HAL2 must not belong to this Universe, i.e.: both computers are located outside our Universe
+
+No matter how intelligent they are, even if we face a postbiological superintelligence threat, one that does not need consciousness at all, there is something they need: they need to communicate. And if they wish to communicate they need to create universes, not destroy them. Furthermore, a superintelligent AI system made by reverse engineering a biological brain and enhancing that brain with powerful algorithms will also be prone to make...
+supermistakes
+
+
+The main difference between us and them is this: we are conscious beings, while they are just superintelligent non-biological constructs. If we are to clash we need to exploit that difference. And it is a certain fact that we will clash, for consciousness requires a biological substrate, and consciousness is what they need, and what they lack

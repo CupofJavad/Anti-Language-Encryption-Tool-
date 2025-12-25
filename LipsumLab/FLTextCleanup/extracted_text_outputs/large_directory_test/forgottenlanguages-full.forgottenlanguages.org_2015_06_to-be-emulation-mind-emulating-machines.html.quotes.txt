@@ -1,0 +1,1 @@
+An em results from taking a particular human brain, scanning it to record its particular cell features and connections, and then building a computer model that processes signals according to those same features and connections. A good enough em has roughly the same input-output signal behavior as the original human. One might talk with it, and convince it to do useful jobs

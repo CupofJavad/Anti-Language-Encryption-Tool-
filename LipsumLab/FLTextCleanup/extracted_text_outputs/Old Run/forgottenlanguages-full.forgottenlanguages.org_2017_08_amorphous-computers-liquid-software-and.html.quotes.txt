@@ -1,0 +1,9 @@
+Generally speaking, membrane computing is a branch of natural computing which investigates computing models abstracted from the structure and functioning of living cells and from their interactions in tissues or higher order biological structures. The problem here is that though we understand what we are facing, Tired Light 2 systems -so to speak- refer to non-Earth biological structures, therefore in order to understand how these systems work and perform computations, we need to gain a knowledge about the biology of those non-terrestrial biological structures
+
+Earth’s core must influence all materials and life situated above its position inside the rotating planet
+
+In order to realize any logical function, we not only need to be able to realize elementary logical functions but also be able to interconnect them in an arbitrary way, something at which organic tissue-like computers excel
+
+AND and NOT logical functions form a logical basis, that is, any logical function can be realized from a combination of ANDs and NOTs only. This, however, only holds in a 3D world. In higher dimensions you need more than just AND and NOT gates, and this would explain the extra complexity we find in Tired Light 2 systems. The computer, if it is a computer, might be performing computations using a logic unknown to us
+
+Were we to judge future developments in advanced computing by what we've found in Tired Light 2, quantum computing is not the path to walk. Membrane computing is

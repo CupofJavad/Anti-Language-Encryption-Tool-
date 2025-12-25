@@ -1,0 +1,9 @@
+Once you recover from the cultural shock of confronting an artificial object that does not belong to this planet, you are confronted with different kinds of symbols, each of them showing different visual properties; we find displays showing simple bidimensional binary shapes, line segments, solid shapes, combinations of line segments, complex color shapes, and even more complex sequences of symbols
+
+We have spent a lot of time attacking those symbols with the best of our computational linguistics tools; bigram conditional entropy analysis and Zipfian statistics both prove that the symbols found in the objects recovered at sensible areas behave like linguistic symbol systems and that the distribution of symbols are not random; there are constraints on what symbols can follow others, and not all of them are equiprobable. So yes, we are looking at a complex language, but that's as far as we can go with our conclusions
+
+. That's all we know
+
+The object provokes certain reactions and expectations which we project back on to it in such a way that the polysemantic possibilities are greatly reduced in order to be in keeping with the expectations that have been aroused. The polysemantic nature of the object and the interpretation-making of the viewer are opposed factors. If the interpretation-making were limited, the polysemantic nature would vanish, but if the polysemantic nature were all-powerful, the interpretation would be destroyed (Iser 1974)
+
+Keeping all this secret does not help. We need archaeologists, computational linguists, experts in ethnography, people with the necessary skills to interpret objects from other worlds, not just objects from a distant past. Not just cryptoanalysts. Sure working in the dark provides the needed quiet research environment for such a hard task, but at the cost of losing synergy, and detaching ourselves from our own cultural environment
