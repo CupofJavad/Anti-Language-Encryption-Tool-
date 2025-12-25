@@ -8,7 +8,11 @@ import sys
 from pathlib import Path
 
 # Add project root to Python path
-project_root = Path(__file__).parent.parent
+# Handle both running from root and from web_app directory
+if Path(__file__).parent.name == 'web_app':
+    project_root = Path(__file__).parent.parent
+else:
+    project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 from flask import Flask, render_template, request, jsonify
