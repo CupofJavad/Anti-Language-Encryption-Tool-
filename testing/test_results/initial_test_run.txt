@@ -1,0 +1,144 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /Users/Javad/PycharmProjects/Anti-Language Tool/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/Javad/PycharmProjects/Anti-Language Tool/testing
+configfile: pytest.ini
+collecting ... collected 8 items / 5 errors
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting test_suites/test_e2e.py ___________________
+ImportError while importing test module '/Users/Javad/PycharmProjects/Anti-Language Tool/testing/test_suites/test_e2e.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:197: in exec_module
+    exec(co, module.__dict__)
+testing/test_suites/test_e2e.py:8: in <module>
+    from web_app.app import app
+web_app/app.py:22: in <module>
+    from forgotten_e2ee.crypto_core import (
+E   ImportError: cannot import name 'secure_random' from 'forgotten_e2ee.crypto_core' (/Users/Javad/PycharmProjects/Anti-Language Tool/forgotten_e2ee/crypto_core.py)
+_______________ ERROR collecting test_suites/test_integration.py _______________
+ImportError while importing test module '/Users/Javad/PycharmProjects/Anti-Language Tool/testing/test_suites/test_integration.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:197: in exec_module
+    exec(co, module.__dict__)
+testing/test_suites/test_integration.py:6: in <module>
+    from web_app.app import app
+web_app/app.py:22: in <module>
+    from forgotten_e2ee.crypto_core import (
+E   ImportError: cannot import name 'secure_random' from 'forgotten_e2ee.crypto_core' (/Users/Javad/PycharmProjects/Anti-Language Tool/forgotten_e2ee/crypto_core.py)
+_______________ ERROR collecting test_suites/test_performance.py _______________
+ImportError while importing test module '/Users/Javad/PycharmProjects/Anti-Language Tool/testing/test_suites/test_performance.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:197: in exec_module
+    exec(co, module.__dict__)
+testing/test_suites/test_performance.py:7: in <module>
+    from web_app.app import app
+web_app/app.py:22: in <module>
+    from forgotten_e2ee.crypto_core import (
+E   ImportError: cannot import name 'secure_random' from 'forgotten_e2ee.crypto_core' (/Users/Javad/PycharmProjects/Anti-Language Tool/forgotten_e2ee/crypto_core.py)
+________________ ERROR collecting test_suites/test_security.py _________________
+ImportError while importing test module '/Users/Javad/PycharmProjects/Anti-Language Tool/testing/test_suites/test_security.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:197: in exec_module
+    exec(co, module.__dict__)
+testing/test_suites/test_security.py:6: in <module>
+    from web_app.app import app
+web_app/app.py:22: in <module>
+    from forgotten_e2ee.crypto_core import (
+E   ImportError: cannot import name 'secure_random' from 'forgotten_e2ee.crypto_core' (/Users/Javad/PycharmProjects/Anti-Language Tool/forgotten_e2ee/crypto_core.py)
+__________________ ERROR collecting test_suites/test_unit.py ___________________
+ImportError while importing test module '/Users/Javad/PycharmProjects/Anti-Language Tool/testing/test_suites/test_unit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:197: in exec_module
+    exec(co, module.__dict__)
+testing/test_suites/test_unit.py:8: in <module>
+    from forgotten_e2ee.util import b64u_enc, b64u_dec, hex24, sha256_hex
+E   ImportError: cannot import name 'sha256_hex' from 'forgotten_e2ee.util' (/Users/Javad/PycharmProjects/Anti-Language Tool/forgotten_e2ee/util.py)
+=========================== short test summary info ============================
+ERROR testing/test_suites/test_e2e.py
+ERROR testing/test_suites/test_integration.py
+ERROR testing/test_suites/test_performance.py
+ERROR testing/test_suites/test_security.py
+ERROR testing/test_suites/test_unit.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.58s ===============================

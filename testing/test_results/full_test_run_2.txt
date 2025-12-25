@@ -1,0 +1,384 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /Users/Javad/PycharmProjects/Anti-Language Tool/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/Javad/PycharmProjects/Anti-Language Tool/testing
+configfile: pytest.ini
+collecting ... collected 57 items
+
+testing/test_suites/test_e2e.py::TestE2EKeyGeneration::test_keygen_production FAILED [  1%]
+testing/test_suites/test_e2e.py::TestE2EKeyGeneration::test_keygen_multiple_times FAILED [  3%]
+testing/test_suites/test_e2e.py::TestE2EEncryption::test_encrypt_decrypt_roundtrip_production FAILED [  5%]
+testing/test_suites/test_e2e.py::TestE2EEncryption::test_encrypt_different_messages FAILED [  7%]
+testing/test_suites/test_e2e.py::TestE2EHealth::test_health_endpoint_production PASSED [  8%]
+testing/test_suites/test_e2e.py::TestE2EHealth::test_production_availability FAILED [ 10%]
+testing/test_suites/test_e2e.py::TestE2EPages::test_index_page_loads FAILED [ 12%]
+testing/test_suites/test_e2e.py::TestE2EPages::test_embed_page_loads FAILED [ 14%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_endpoint_exists PASSED [ 15%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_with_name PASSED [ 17%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_without_name PASSED [ 19%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_public_key_format PASSED [ 21%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_secret_key_format PASSED [ 22%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_endpoint_exists PASSED [ 24%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_missing_recipient_pub PASSED [ 26%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_with_valid_keys PASSED [ 28%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_armor_mode PASSED [ 29%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_decrypt_endpoint_exists PASSED [ 31%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_decrypt_missing_parameters PASSED [ 33%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_encrypt_decrypt_roundtrip PASSED [ 35%]
+testing/test_suites/test_integration.py::TestHealthEndpoint::test_health_endpoint PASSED [ 36%]
+testing/test_suites/test_integration.py::TestRoutes::test_index_route PASSED [ 38%]
+testing/test_suites/test_integration.py::TestRoutes::test_embed_route PASSED [ 40%]
+testing/test_suites/test_integration.py::TestRoutes::test_nonexistent_route PASSED [ 42%]
+testing/test_suites/test_performance.py::TestPerformanceKeyGeneration::test_keygen_response_time PASSED [ 43%]
+testing/test_suites/test_performance.py::TestPerformanceKeyGeneration::test_keygen_concurrent_requests PASSED [ 45%]
+testing/test_suites/test_performance.py::TestPerformanceEncryption::test_encrypt_response_time PASSED [ 47%]
+testing/test_suites/test_performance.py::TestPerformanceEncryption::test_encrypt_different_sizes PASSED [ 49%]
+testing/test_suites/test_performance.py::TestPerformanceDecryption::test_decrypt_response_time PASSED [ 50%]
+testing/test_suites/test_security.py::TestSecurityKeyGeneration::test_keys_are_unique PASSED [ 52%]
+testing/test_suites/test_security.py::TestSecurityKeyGeneration::test_secret_key_not_in_public_key PASSED [ 54%]
+testing/test_suites/test_security.py::TestSecurityEncryption::test_same_message_different_ciphertext PASSED [ 56%]
+testing/test_suites/test_security.py::TestSecurityEncryption::test_encryption_requires_valid_key PASSED [ 57%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_xss_prevention PASSED [ 59%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_sql_injection_prevention PASSED [ 61%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_very_long_input PASSED [ 63%]
+testing/test_suites/test_security.py::TestSecurityErrorHandling::test_error_messages_no_sensitive_data PASSED [ 64%]
+testing/test_suites/test_ui_ux.py::TestUIKeyGeneration::test_keygen_ui_elements SKIPPED [ 66%]
+testing/test_suites/test_ui_ux.py::TestUIKeyGeneration::test_keygen_form_interaction SKIPPED [ 68%]
+testing/test_suites/test_ui_ux.py::TestUIEncryption::test_encrypt_tab_switching SKIPPED [ 70%]
+testing/test_suites/test_ui_ux.py::TestUIResponsive::test_mobile_viewport SKIPPED [ 71%]
+testing/test_suites/test_ui_ux.py::TestUIResponsive::test_tablet_viewport SKIPPED [ 73%]
+testing/test_suites/test_ui_ux.py::TestUIFunctional::test_embed_page_accessible PASSED [ 75%]
+testing/test_suites/test_ui_ux.py::TestUIFunctional::test_main_page_accessible PASSED [ 77%]
+testing/test_suites/test_ui_ux.py::TestUIFunctional::test_page_contains_expected_elements SKIPPED [ 78%]
+testing/test_suites/test_unit.py::TestIdentity::test_identity_creation PASSED [ 80%]
+testing/test_suites/test_unit.py::TestIdentity::test_identity_fingerprint PASSED [ 82%]
+testing/test_suites/test_unit.py::TestIdentity::test_identity_public_keys PASSED [ 84%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_ed25519_keypair PASSED [ 85%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_x25519_keypair PASSED [ 87%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_keypair_uniqueness PASSED [ 89%]
+testing/test_suites/test_unit.py::TestSerialization::test_raw_pub_bytes_ed PASSED [ 91%]
+testing/test_suites/test_unit.py::TestSerialization::test_raw_pub_bytes_x PASSED [ 92%]
+testing/test_suites/test_unit.py::TestSerialization::test_b64u_encoding PASSED [ 94%]
+testing/test_suites/test_unit.py::TestSerialization::test_hex24 PASSED   [ 96%]
+testing/test_suites/test_unit.py::TestKeyBundle::test_public_bundle_creation PASSED [ 98%]
+testing/test_suites/test_unit.py::TestKeyBundle::test_secret_bundle_creation PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ TestE2EKeyGeneration.test_keygen_production __________________
+testing/test_suites/test_e2e.py:30: in test_keygen_production
+    assert response.status_code == 200
+E   assert 500 == 200
+E    +  where 500 = <Response [500]>.status_code
+_______________ TestE2EKeyGeneration.test_keygen_multiple_times ________________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:41: in test_keygen_multiple_times
+    response = requests.post(
+.venv/lib/python3.12/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+_________ TestE2EEncryption.test_encrypt_decrypt_roundtrip_production __________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:62: in test_encrypt_decrypt_roundtrip_production
+    keygen_response = requests.post(
+.venv/lib/python3.12/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+______________ TestE2EEncryption.test_encrypt_different_messages _______________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:108: in test_encrypt_different_messages
+    keygen_response = requests.post(
+.venv/lib/python3.12/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+__________________ TestE2EHealth.test_production_availability __________________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:153: in test_production_availability
+    response = requests.get(PRODUCTION_URL, timeout=10)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:73: in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+______________________ TestE2EPages.test_index_page_loads ______________________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:162: in test_index_page_loads
+    response = requests.get(PRODUCTION_URL, timeout=10)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:73: in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+______________________ TestE2EPages.test_embed_page_loads ______________________
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:461: in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+E   PermissionError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:488: in _make_request
+    raise new_e
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:464: in _make_request
+    self._validate_conn(conn)
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1093: in _validate_conn
+    conn.connect()
+.venv/lib/python3.12/site-packages/urllib3/connection.py:796: in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+.venv/lib/python3.12/site-packages/urllib3/connection.py:975: in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py:463: in ssl_wrap_socket
+    raise SSLError(e) from e
+E   urllib3.exceptions.SSLError: [Errno 1] Operation not permitted
+
+The above exception was the direct cause of the following exception:
+.venv/lib/python3.12/site-packages/requests/adapters.py:644: in send
+    resp = conn.urlopen(
+.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:841: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.12/site-packages/urllib3/util/retry.py:519: in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /embed (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+
+During handling of the above exception, another exception occurred:
+testing/test_suites/test_e2e.py:169: in test_embed_page_loads
+    response = requests.get(f"{PRODUCTION_URL}/embed", timeout=10)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:73: in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:589: in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/sessions.py:703: in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/requests/adapters.py:675: in send
+    raise SSLError(e, request=request)
+E   requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /embed (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+=========================== short test summary info ============================
+FAILED testing/test_suites/test_e2e.py::TestE2EKeyGeneration::test_keygen_production - assert 500 == 200
+ +  where 500 = <Response [500]>.status_code
+FAILED testing/test_suites/test_e2e.py::TestE2EKeyGeneration::test_keygen_multiple_times - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+FAILED testing/test_suites/test_e2e.py::TestE2EEncryption::test_encrypt_decrypt_roundtrip_production - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+FAILED testing/test_suites/test_e2e.py::TestE2EEncryption::test_encrypt_different_messages - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /api/keygen (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+FAILED testing/test_suites/test_e2e.py::TestE2EHealth::test_production_availability - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+FAILED testing/test_suites/test_e2e.py::TestE2EPages::test_index_page_loads - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: / (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+FAILED testing/test_suites/test_e2e.py::TestE2EPages::test_embed_page_loads - requests.exceptions.SSLError: HTTPSConnectionPool(host='antilanguageencryptiontool-y9rjc.ondigitalocean.app', port=443): Max retries exceeded with url: /embed (Caused by SSLError(PermissionError(1, 'Operation not permitted')))
+=================== 7 failed, 44 passed, 6 skipped in 4.57s ====================

@@ -22,10 +22,10 @@ from forgotten_e2ee.keystore import Identity, save_public, save_secret, load_sec
 from forgotten_e2ee.crypto_core import (
     ed25519_keypair, x25519_keypair, raw_pub_bytes_ed, raw_pub_bytes_x,
     raw_priv_bytes_ed, raw_priv_bytes_x, hkdf, aead_encrypt, aead_decrypt,
-    ed_sign, ed_verify, sha256_hex, secure_random
+    ed_sign, ed_verify, sha256_hex
 )
 from forgotten_e2ee.fmt import FGHeader, emit_armor, parse_armor
-from forgotten_e2ee.util import b64u_enc, b64u_dec, hex24, sha256_hex, now_s
+from forgotten_e2ee.util import b64u_enc, b64u_dec, hex24, now_s, secure_random
 from forgotten_e2ee.stego import load_lexicon, lexicon_hash, encode_token_map, decode_token_map
 from forgotten_e2ee.errors import ESig, EDecrypt, ELexicon
 from forgotten_e2ee.pq import hybrid_secret
@@ -273,7 +273,10 @@ def api_decrypt():
             if pq_ct:
                 try:
                     from forgotten_e2ee.pq import kyber_decapsulate
-                    pq_ss = kyber_decapsulate(ident.x_priv, pq_ct)  # Note: This might need adjustment
+                    # kyber_decapsulate takes (ct, sk) where sk is bytes
+                    from forgotten_e2ee.crypto_core import raw_priv_bytes_x
+                    x_priv_bytes = raw_priv_bytes_x(ident.x_priv)
+                    pq_ss = kyber_decapsulate(pq_ct, x_priv_bytes)
                 except Exception:
                     pq_ss = b""
             

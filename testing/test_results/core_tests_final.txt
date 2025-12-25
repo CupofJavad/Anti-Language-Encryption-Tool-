@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /Users/Javad/PycharmProjects/Anti-Language Tool/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/Javad/PycharmProjects/Anti-Language Tool/testing
+configfile: pytest.ini
+collecting ... collected 41 items
+
+testing/test_suites/test_unit.py::TestIdentity::test_identity_creation PASSED [  2%]
+testing/test_suites/test_unit.py::TestIdentity::test_identity_fingerprint PASSED [  4%]
+testing/test_suites/test_unit.py::TestIdentity::test_identity_public_keys PASSED [  7%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_ed25519_keypair PASSED [  9%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_x25519_keypair PASSED [ 12%]
+testing/test_suites/test_unit.py::TestKeyGeneration::test_keypair_uniqueness PASSED [ 14%]
+testing/test_suites/test_unit.py::TestSerialization::test_raw_pub_bytes_ed PASSED [ 17%]
+testing/test_suites/test_unit.py::TestSerialization::test_raw_pub_bytes_x PASSED [ 19%]
+testing/test_suites/test_unit.py::TestSerialization::test_b64u_encoding PASSED [ 21%]
+testing/test_suites/test_unit.py::TestSerialization::test_hex24 PASSED   [ 24%]
+testing/test_suites/test_unit.py::TestKeyBundle::test_public_bundle_creation PASSED [ 26%]
+testing/test_suites/test_unit.py::TestKeyBundle::test_secret_bundle_creation PASSED [ 29%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_endpoint_exists PASSED [ 31%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_with_name PASSED [ 34%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_without_name PASSED [ 36%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_public_key_format PASSED [ 39%]
+testing/test_suites/test_integration.py::TestAPIKeygen::test_keygen_secret_key_format PASSED [ 41%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_endpoint_exists PASSED [ 43%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_missing_recipient_pub PASSED [ 46%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_with_valid_keys PASSED [ 48%]
+testing/test_suites/test_integration.py::TestAPIEncrypt::test_encrypt_armor_mode PASSED [ 51%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_decrypt_endpoint_exists PASSED [ 53%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_decrypt_missing_parameters PASSED [ 56%]
+testing/test_suites/test_integration.py::TestAPIDecrypt::test_encrypt_decrypt_roundtrip PASSED [ 58%]
+testing/test_suites/test_integration.py::TestHealthEndpoint::test_health_endpoint PASSED [ 60%]
+testing/test_suites/test_integration.py::TestRoutes::test_index_route PASSED [ 63%]
+testing/test_suites/test_integration.py::TestRoutes::test_embed_route PASSED [ 65%]
+testing/test_suites/test_integration.py::TestRoutes::test_nonexistent_route PASSED [ 68%]
+testing/test_suites/test_performance.py::TestPerformanceKeyGeneration::test_keygen_response_time PASSED [ 70%]
+testing/test_suites/test_performance.py::TestPerformanceKeyGeneration::test_keygen_concurrent_requests PASSED [ 73%]
+testing/test_suites/test_performance.py::TestPerformanceEncryption::test_encrypt_response_time PASSED [ 75%]
+testing/test_suites/test_performance.py::TestPerformanceEncryption::test_encrypt_different_sizes PASSED [ 78%]
+testing/test_suites/test_performance.py::TestPerformanceDecryption::test_decrypt_response_time PASSED [ 80%]
+testing/test_suites/test_security.py::TestSecurityKeyGeneration::test_keys_are_unique PASSED [ 82%]
+testing/test_suites/test_security.py::TestSecurityKeyGeneration::test_secret_key_not_in_public_key PASSED [ 85%]
+testing/test_suites/test_security.py::TestSecurityEncryption::test_same_message_different_ciphertext PASSED [ 87%]
+testing/test_suites/test_security.py::TestSecurityEncryption::test_encryption_requires_valid_key PASSED [ 90%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_xss_prevention PASSED [ 92%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_sql_injection_prevention PASSED [ 95%]
+testing/test_suites/test_security.py::TestSecurityInputValidation::test_very_long_input PASSED [ 97%]
+testing/test_suites/test_security.py::TestSecurityErrorHandling::test_error_messages_no_sensitive_data PASSED [100%]
+
+============================== 41 passed in 0.20s ==============================
