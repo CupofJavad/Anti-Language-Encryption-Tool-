@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /Users/Javad/PycharmProjects/Anti-Language Tool/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/Javad/PycharmProjects/Anti-Language Tool/testing
+configfile: pytest.ini
+collecting ... collected 41 items
+
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_empty_name PASSED [  2%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_missing_name_field PASSED [  4%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_name_with_special_characters PASSED [  7%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_name_with_unicode PASSED [  9%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_name_very_long PASSED [ 12%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_name_with_newlines PASSED [ 14%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_name_whitespace_only PASSED [ 17%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_invalid_json PASSED [ 19%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_wrong_content_type PASSED [ 21%]
+testing/test_suites/test_user_errors.py::TestUserErrorKeyGeneration::test_keygen_null_name PASSED [ 24%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_missing_recipient_pub PASSED [ 26%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_empty_recipient_pub PASSED [ 29%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_invalid_recipient_pub_json PASSED [ 31%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_malformed_recipient_pub PASSED [ 34%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_invalid_base64_in_pubkey PASSED [ 36%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_empty_message PASSED [ 39%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_missing_message PASSED [ 41%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_very_long_message PASSED [ 43%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_message_with_special_characters PASSED [ 46%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_message_with_unicode PASSED [ 48%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_armor_without_lexicon PASSED [ 51%]
+testing/test_suites/test_user_errors.py::TestUserErrorEncryption::test_encrypt_wrong_key_type PASSED [ 53%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_missing_secret_key PASSED [ 56%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_missing_encrypted_data PASSED [ 58%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_empty_secret_key PASSED [ 60%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_invalid_secret_key_json PASSED [ 63%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_malformed_secret_key PASSED [ 65%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_wrong_secret_key PASSED [ 68%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_invalid_encrypted_data PASSED [ 70%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_corrupted_encrypted_data PASSED [ 73%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_empty_encrypted_data PASSED [ 75%]
+testing/test_suites/test_user_errors.py::TestUserErrorDecryption::test_decrypt_message_for_different_recipient PASSED [ 78%]
+testing/test_suites/test_user_errors.py::TestUserErrorRoundtrip::test_roundtrip_with_whitespace_in_keys PASSED [ 80%]
+testing/test_suites/test_user_errors.py::TestUserErrorRoundtrip::test_roundtrip_partial_key_copy PASSED [ 82%]
+testing/test_suites/test_user_errors.py::TestUserErrorRoundtrip::test_roundtrip_keys_from_different_sessions PASSED [ 85%]
+testing/test_suites/test_user_errors.py::TestUserErrorNetwork::test_concurrent_keygen_requests PASSED [ 87%]
+testing/test_suites/test_user_errors.py::TestUserErrorNetwork::test_concurrent_encrypt_requests PASSED [ 90%]
+testing/test_suites/test_user_errors.py::TestUserErrorInputValidation::test_keygen_non_string_name PASSED [ 92%]
+testing/test_suites/test_user_errors.py::TestUserErrorInputValidation::test_keygen_array_as_name PASSED [ 95%]
+testing/test_suites/test_user_errors.py::TestUserErrorInputValidation::test_encrypt_non_string_plaintext PASSED [ 97%]
+testing/test_suites/test_user_errors.py::TestUserErrorInputValidation::test_encrypt_boolean_armor PASSED [100%]
+
+============================== 41 passed in 0.28s ==============================
